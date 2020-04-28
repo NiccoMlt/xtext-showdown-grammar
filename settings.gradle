@@ -1,0 +1,2 @@
+include 'io.github.niccomlt.showdown'
+include 'io.github.niccomlt.showdown.ide'

@@ -1,0 +1,9 @@
+grammar io.github.niccomlt.showdown.ShowdownGrammar with org.eclipse.xtext.common.Terminals
+
+generate showdownGrammar "http://www.github.io/niccomlt/showdown/ShowdownGrammar"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
