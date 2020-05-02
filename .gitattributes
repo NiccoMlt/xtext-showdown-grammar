@@ -159,3 +159,6 @@
 #*.props     merge=binary
 #*.filters   merge=binary
 #*.vcxitems  merge=binary
+
+## Linguist fixes ##
+*.g  text linguist-language=ANTLR
