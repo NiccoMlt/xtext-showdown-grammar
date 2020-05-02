@@ -5,9 +5,10 @@ package io.github.niccomlt.showdown.serializer;
 
 import com.google.inject.Inject;
 import io.github.niccomlt.showdown.services.ShowdownGrammarGrammarAccess;
-import io.github.niccomlt.showdown.showdownGrammar.Greeting;
-import io.github.niccomlt.showdown.showdownGrammar.Model;
+import io.github.niccomlt.showdown.showdownGrammar.Pokemon;
 import io.github.niccomlt.showdown.showdownGrammar.ShowdownGrammarPackage;
+import io.github.niccomlt.showdown.showdownGrammar.Stat;
+import io.github.niccomlt.showdown.showdownGrammar.Team;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -33,11 +34,14 @@ public class ShowdownGrammarSemanticSequencer extends AbstractDelegatingSemantic
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == ShowdownGrammarPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case ShowdownGrammarPackage.GREETING:
-				sequence_Greeting(context, (Greeting) semanticObject); 
+			case ShowdownGrammarPackage.POKEMON:
+				sequence_Pokemon(context, (Pokemon) semanticObject); 
 				return; 
-			case ShowdownGrammarPackage.MODEL:
-				sequence_Model(context, (Model) semanticObject); 
+			case ShowdownGrammarPackage.STAT:
+				sequence_Stat(context, (Stat) semanticObject); 
+				return; 
+			case ShowdownGrammarPackage.TEAM:
+				sequence_Team(context, (Team) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -46,30 +50,53 @@ public class ShowdownGrammarSemanticSequencer extends AbstractDelegatingSemantic
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns Greeting
+	 *     Pokemon returns Pokemon
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (
+	 *         ((nick=Nickname specie=Specie) | specie=Specie) 
+	 *         item=ID 
+	 *         ability=Ability 
+	 *         level=INT? 
+	 *         shiny=Shiny? 
+	 *         happiness=INT? 
+	 *         evs+=Stat* 
+	 *         nature=ID? 
+	 *         ivs+=Stat* 
+	 *         moves+=Move+
+	 *     )
 	 */
-	protected void sequence_Greeting(ISerializationContext context, Greeting semanticObject) {
+	protected void sequence_Pokemon(ISerializationContext context, Pokemon semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Stat returns Stat
+	 *
+	 * Constraint:
+	 *     value=INT
+	 */
+	protected void sequence_Stat(ISerializationContext context, Stat semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ShowdownGrammarPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ShowdownGrammarPackage.Literals.GREETING__NAME));
+			if (transientValues.isValueTransient(semanticObject, ShowdownGrammarPackage.Literals.STAT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ShowdownGrammarPackage.Literals.STAT__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getStatAccess().getValueINTTerminalRuleCall_0_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Model returns Model
+	 *     Team returns Team
 	 *
 	 * Constraint:
-	 *     greetings+=Greeting+
+	 *     elements+=Pokemon+
 	 */
-	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
+	protected void sequence_Team(ISerializationContext context, Team semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

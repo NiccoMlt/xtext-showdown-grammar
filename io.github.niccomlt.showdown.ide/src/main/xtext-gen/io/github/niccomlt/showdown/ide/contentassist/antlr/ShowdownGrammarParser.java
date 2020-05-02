@@ -31,9 +31,35 @@ public class ShowdownGrammarParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, ShowdownGrammarGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
-			builder.put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
-			builder.put(grammarAccess.getGreetingAccess().getNameAssignment_1(), "rule__Greeting__NameAssignment_1");
+			builder.put(grammarAccess.getPokemonAccess().getAlternatives_0(), "rule__Pokemon__Alternatives_0");
+			builder.put(grammarAccess.getMoveAccess().getAlternatives(), "rule__Move__Alternatives");
+			builder.put(grammarAccess.getStatAccess().getAlternatives_1(), "rule__Stat__Alternatives_1");
+			builder.put(grammarAccess.getPokemonAccess().getGroup(), "rule__Pokemon__Group__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_0_0(), "rule__Pokemon__Group_0_0__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_6(), "rule__Pokemon__Group_6__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_7(), "rule__Pokemon__Group_7__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_8(), "rule__Pokemon__Group_8__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_9(), "rule__Pokemon__Group_9__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_9_2(), "rule__Pokemon__Group_9_2__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_10(), "rule__Pokemon__Group_10__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_11(), "rule__Pokemon__Group_11__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_11_2(), "rule__Pokemon__Group_11_2__0");
+			builder.put(grammarAccess.getPokemonAccess().getGroup_12(), "rule__Pokemon__Group_12__0");
+			builder.put(grammarAccess.getStatAccess().getGroup(), "rule__Stat__Group__0");
+			builder.put(grammarAccess.getTeamAccess().getElementsAssignment(), "rule__Team__ElementsAssignment");
+			builder.put(grammarAccess.getPokemonAccess().getNickAssignment_0_0_0(), "rule__Pokemon__NickAssignment_0_0_0");
+			builder.put(grammarAccess.getPokemonAccess().getSpecieAssignment_0_0_2(), "rule__Pokemon__SpecieAssignment_0_0_2");
+			builder.put(grammarAccess.getPokemonAccess().getSpecieAssignment_0_1(), "rule__Pokemon__SpecieAssignment_0_1");
+			builder.put(grammarAccess.getPokemonAccess().getItemAssignment_2(), "rule__Pokemon__ItemAssignment_2");
+			builder.put(grammarAccess.getPokemonAccess().getAbilityAssignment_5(), "rule__Pokemon__AbilityAssignment_5");
+			builder.put(grammarAccess.getPokemonAccess().getLevelAssignment_6_2(), "rule__Pokemon__LevelAssignment_6_2");
+			builder.put(grammarAccess.getPokemonAccess().getShinyAssignment_7_2(), "rule__Pokemon__ShinyAssignment_7_2");
+			builder.put(grammarAccess.getPokemonAccess().getHappinessAssignment_8_2(), "rule__Pokemon__HappinessAssignment_8_2");
+			builder.put(grammarAccess.getPokemonAccess().getEvsAssignment_9_2_0(), "rule__Pokemon__EvsAssignment_9_2_0");
+			builder.put(grammarAccess.getPokemonAccess().getNatureAssignment_10_0(), "rule__Pokemon__NatureAssignment_10_0");
+			builder.put(grammarAccess.getPokemonAccess().getIvsAssignment_11_2_0(), "rule__Pokemon__IvsAssignment_11_2_0");
+			builder.put(grammarAccess.getPokemonAccess().getMovesAssignment_12_1(), "rule__Pokemon__MovesAssignment_12_1");
+			builder.put(grammarAccess.getStatAccess().getValueAssignment_0(), "rule__Stat__ValueAssignment_0");
 		}
 	}
 	

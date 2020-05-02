@@ -2,8 +2,42 @@ grammar io.github.niccomlt.showdown.ShowdownGrammar with org.eclipse.xtext.commo
 
 generate showdownGrammar "http://niccomlt.github.io/xtext-showdown-grammar"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+Team:
+	(elements += Pokemon)*
+;
+
+Pokemon:
+	(nick=Nickname '(' specie=Specie ')' | specie=Specie) '@' item=ID
+	'Ability' ':' ability=Ability
+	('Level' ':' level=INT)?
+	('Shiny' ':' shiny=Shiny)?
+	('Happiness' ':' happiness=INT)?
+	('EVs' ':' (evs += Stat '/'?)*)?
+	(nature=ID 'Nature')?
+	('IVs' ':' (ivs += Stat '/'?)*)?
+	('-' moves += Move)+
+;
+
+Move:
+	ID+
+;
+
+Stat:
+	value=INT ('HP' | 'Atk' | 'Def' | 'SpA' | 'SpD' | 'Spe')
+;
+
+Shiny:
+	'Yes'
+;
+
+Specie:
+	ID
+;
+
+Nickname:
+	ID
+;
+
+Ability:
+	ID+
+;

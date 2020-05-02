@@ -30,8 +30,8 @@ public class ShowdownGrammarStandaloneSetupGenerated implements ISetup {
 	}
 	
 	public void register(Injector injector) {
-		if (!EPackage.Registry.INSTANCE.containsKey("http://www.github.io/niccomlt/showdown/ShowdownGrammar")) {
-			EPackage.Registry.INSTANCE.put("http://www.github.io/niccomlt/showdown/ShowdownGrammar", ShowdownGrammarPackage.eINSTANCE);
+		if (!EPackage.Registry.INSTANCE.containsKey("http://niccomlt.github.io/xtext-showdown-grammar")) {
+			EPackage.Registry.INSTANCE.put("http://niccomlt.github.io/xtext-showdown-grammar", ShowdownGrammarPackage.eINSTANCE);
 		}
 		IResourceFactory resourceFactory = injector.getInstance(IResourceFactory.class);
 		IResourceServiceProvider serviceProvider = injector.getInstance(IResourceServiceProvider.class);

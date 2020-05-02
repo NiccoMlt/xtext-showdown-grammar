@@ -39,7 +39,7 @@ public interface ShowdownGrammarPackage extends EPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_URI = "http://www.github.io/niccomlt/showdown/ShowdownGrammar";
+  String eNS_URI = "http://niccomlt.github.io/xtext-showdown-grammar";
 
   /**
    * The package namespace name.
@@ -58,103 +58,352 @@ public interface ShowdownGrammarPackage extends EPackage
   ShowdownGrammarPackage eINSTANCE = io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.TeamImpl <em>Team</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see io.github.niccomlt.showdown.showdownGrammar.impl.ModelImpl
-   * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getModel()
+   * @see io.github.niccomlt.showdown.showdownGrammar.impl.TeamImpl
+   * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getTeam()
    * @generated
    */
-  int MODEL = 0;
+  int TEAM = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int TEAM__ELEMENTS = 0;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The number of structural features of the '<em>Team</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int TEAM_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.GreetingImpl <em>Greeting</em>}' class.
+   * The meta object id for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.PokemonImpl <em>Pokemon</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see io.github.niccomlt.showdown.showdownGrammar.impl.GreetingImpl
-   * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getGreeting()
+   * @see io.github.niccomlt.showdown.showdownGrammar.impl.PokemonImpl
+   * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getPokemon()
    * @generated
    */
-  int GREETING = 1;
+  int POKEMON = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GREETING__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Greeting</em>' class.
+   * The feature id for the '<em><b>Nick</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 1;
+  int POKEMON__NICK = 0;
+
+  /**
+   * The feature id for the '<em><b>Specie</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__SPECIE = 1;
+
+  /**
+   * The feature id for the '<em><b>Item</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__ITEM = 2;
+
+  /**
+   * The feature id for the '<em><b>Ability</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__ABILITY = 3;
+
+  /**
+   * The feature id for the '<em><b>Level</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__LEVEL = 4;
+
+  /**
+   * The feature id for the '<em><b>Shiny</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__SHINY = 5;
+
+  /**
+   * The feature id for the '<em><b>Happiness</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__HAPPINESS = 6;
+
+  /**
+   * The feature id for the '<em><b>Evs</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__EVS = 7;
+
+  /**
+   * The feature id for the '<em><b>Nature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__NATURE = 8;
+
+  /**
+   * The feature id for the '<em><b>Ivs</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__IVS = 9;
+
+  /**
+   * The feature id for the '<em><b>Moves</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON__MOVES = 10;
+
+  /**
+   * The number of structural features of the '<em>Pokemon</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POKEMON_FEATURE_COUNT = 11;
+
+  /**
+   * The meta object id for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.StatImpl <em>Stat</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.github.niccomlt.showdown.showdownGrammar.impl.StatImpl
+   * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getStat()
+   * @generated
+   */
+  int STAT = 2;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STAT__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>Stat</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STAT_FEATURE_COUNT = 1;
 
 
   /**
-   * Returns the meta object for class '{@link io.github.niccomlt.showdown.showdownGrammar.Model <em>Model</em>}'.
+   * Returns the meta object for class '{@link io.github.niccomlt.showdown.showdownGrammar.Team <em>Team</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see io.github.niccomlt.showdown.showdownGrammar.Model
+   * @return the meta object for class '<em>Team</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Team
    * @generated
    */
-  EClass getModel();
+  EClass getTeam();
 
   /**
-   * Returns the meta object for the containment reference list '{@link io.github.niccomlt.showdown.showdownGrammar.Model#getGreetings <em>Greetings</em>}'.
+   * Returns the meta object for the containment reference list '{@link io.github.niccomlt.showdown.showdownGrammar.Team#getElements <em>Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see io.github.niccomlt.showdown.showdownGrammar.Model#getGreetings()
-   * @see #getModel()
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Team#getElements()
+   * @see #getTeam()
    * @generated
    */
-  EReference getModel_Greetings();
+  EReference getTeam_Elements();
 
   /**
-   * Returns the meta object for class '{@link io.github.niccomlt.showdown.showdownGrammar.Greeting <em>Greeting</em>}'.
+   * Returns the meta object for class '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon <em>Pokemon</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see io.github.niccomlt.showdown.showdownGrammar.Greeting
+   * @return the meta object for class '<em>Pokemon</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon
    * @generated
    */
-  EClass getGreeting();
+  EClass getPokemon();
 
   /**
-   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Greeting#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getNick <em>Nick</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see io.github.niccomlt.showdown.showdownGrammar.Greeting#getName()
-   * @see #getGreeting()
+   * @return the meta object for the attribute '<em>Nick</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getNick()
+   * @see #getPokemon()
    * @generated
    */
-  EAttribute getGreeting_Name();
+  EAttribute getPokemon_Nick();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getSpecie <em>Specie</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Specie</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getSpecie()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Specie();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getItem <em>Item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Item</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getItem()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Item();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getAbility <em>Ability</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Ability</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getAbility()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Ability();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getLevel <em>Level</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Level</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getLevel()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Level();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getShiny <em>Shiny</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Shiny</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getShiny()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Shiny();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getHappiness <em>Happiness</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Happiness</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getHappiness()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Happiness();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getEvs <em>Evs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Evs</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getEvs()
+   * @see #getPokemon()
+   * @generated
+   */
+  EReference getPokemon_Evs();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getNature <em>Nature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Nature</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getNature()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Nature();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getIvs <em>Ivs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ivs</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getIvs()
+   * @see #getPokemon()
+   * @generated
+   */
+  EReference getPokemon_Ivs();
+
+  /**
+   * Returns the meta object for the attribute list '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon#getMoves <em>Moves</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Moves</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon#getMoves()
+   * @see #getPokemon()
+   * @generated
+   */
+  EAttribute getPokemon_Moves();
+
+  /**
+   * Returns the meta object for class '{@link io.github.niccomlt.showdown.showdownGrammar.Stat <em>Stat</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Stat</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Stat
+   * @generated
+   */
+  EClass getStat();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.github.niccomlt.showdown.showdownGrammar.Stat#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Stat#getValue()
+   * @see #getStat()
+   * @generated
+   */
+  EAttribute getStat_Value();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -180,40 +429,138 @@ public interface ShowdownGrammarPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.TeamImpl <em>Team</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see io.github.niccomlt.showdown.showdownGrammar.impl.ModelImpl
-     * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getModel()
+     * @see io.github.niccomlt.showdown.showdownGrammar.impl.TeamImpl
+     * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getTeam()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass TEAM = eINSTANCE.getTeam();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EReference TEAM__ELEMENTS = eINSTANCE.getTeam_Elements();
 
     /**
-     * The meta object literal for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.GreetingImpl <em>Greeting</em>}' class.
+     * The meta object literal for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.PokemonImpl <em>Pokemon</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see io.github.niccomlt.showdown.showdownGrammar.impl.GreetingImpl
-     * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getGreeting()
+     * @see io.github.niccomlt.showdown.showdownGrammar.impl.PokemonImpl
+     * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getPokemon()
      * @generated
      */
-    EClass GREETING = eINSTANCE.getGreeting();
+    EClass POKEMON = eINSTANCE.getPokemon();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nick</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute POKEMON__NICK = eINSTANCE.getPokemon_Nick();
+
+    /**
+     * The meta object literal for the '<em><b>Specie</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__SPECIE = eINSTANCE.getPokemon_Specie();
+
+    /**
+     * The meta object literal for the '<em><b>Item</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__ITEM = eINSTANCE.getPokemon_Item();
+
+    /**
+     * The meta object literal for the '<em><b>Ability</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__ABILITY = eINSTANCE.getPokemon_Ability();
+
+    /**
+     * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__LEVEL = eINSTANCE.getPokemon_Level();
+
+    /**
+     * The meta object literal for the '<em><b>Shiny</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__SHINY = eINSTANCE.getPokemon_Shiny();
+
+    /**
+     * The meta object literal for the '<em><b>Happiness</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__HAPPINESS = eINSTANCE.getPokemon_Happiness();
+
+    /**
+     * The meta object literal for the '<em><b>Evs</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POKEMON__EVS = eINSTANCE.getPokemon_Evs();
+
+    /**
+     * The meta object literal for the '<em><b>Nature</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__NATURE = eINSTANCE.getPokemon_Nature();
+
+    /**
+     * The meta object literal for the '<em><b>Ivs</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POKEMON__IVS = eINSTANCE.getPokemon_Ivs();
+
+    /**
+     * The meta object literal for the '<em><b>Moves</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POKEMON__MOVES = eINSTANCE.getPokemon_Moves();
+
+    /**
+     * The meta object literal for the '{@link io.github.niccomlt.showdown.showdownGrammar.impl.StatImpl <em>Stat</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.github.niccomlt.showdown.showdownGrammar.impl.StatImpl
+     * @see io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarPackageImpl#getStat()
+     * @generated
+     */
+    EClass STAT = eINSTANCE.getStat();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STAT__VALUE = eINSTANCE.getStat_Value();
 
   }
 

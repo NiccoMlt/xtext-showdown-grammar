@@ -49,161 +49,1652 @@ import io.github.niccomlt.showdown.services.ShowdownGrammarGrammarAccess;
 	}
 }
 
-// Entry rule entryRuleModel
-entryRuleModel
+// Entry rule entryRuleTeam
+entryRuleTeam
 :
-{ before(grammarAccess.getModelRule()); }
-	 ruleModel
-{ after(grammarAccess.getModelRule()); } 
+{ before(grammarAccess.getTeamRule()); }
+	 ruleTeam
+{ after(grammarAccess.getTeamRule()); } 
 	 EOF 
 ;
 
-// Rule Model
-ruleModel 
+// Rule Team
+ruleTeam 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getModelAccess().getGreetingsAssignment()); }
-		(rule__Model__GreetingsAssignment)*
-		{ after(grammarAccess.getModelAccess().getGreetingsAssignment()); }
+		{ before(grammarAccess.getTeamAccess().getElementsAssignment()); }
+		(rule__Team__ElementsAssignment)*
+		{ after(grammarAccess.getTeamAccess().getElementsAssignment()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleGreeting
-entryRuleGreeting
+// Entry rule entryRulePokemon
+entryRulePokemon
 :
-{ before(grammarAccess.getGreetingRule()); }
-	 ruleGreeting
-{ after(grammarAccess.getGreetingRule()); } 
+{ before(grammarAccess.getPokemonRule()); }
+	 rulePokemon
+{ after(grammarAccess.getPokemonRule()); } 
 	 EOF 
 ;
 
-// Rule Greeting
-ruleGreeting 
+// Rule Pokemon
+rulePokemon 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getGreetingAccess().getGroup()); }
-		(rule__Greeting__Group__0)
-		{ after(grammarAccess.getGreetingAccess().getGroup()); }
+		{ before(grammarAccess.getPokemonAccess().getGroup()); }
+		(rule__Pokemon__Group__0)
+		{ after(grammarAccess.getPokemonAccess().getGroup()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Greeting__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
+// Entry rule entryRuleMove
+entryRuleMove
 :
-	rule__Greeting__Group__0__Impl
-	rule__Greeting__Group__1
+{ before(grammarAccess.getMoveRule()); }
+	 ruleMove
+{ after(grammarAccess.getMoveRule()); } 
+	 EOF 
 ;
-finally {
-	restoreStackSize(stackSize);
-}
 
-rule__Greeting__Group__0__Impl
+// Rule Move
+ruleMove 
 	@init {
 		int stackSize = keepStackSize();
 	}
-:
-(
-	{ before(grammarAccess.getGreetingAccess().getHelloKeyword_0()); }
-	'Hello'
-	{ after(grammarAccess.getGreetingAccess().getHelloKeyword_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Greeting__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Greeting__Group__1__Impl
-	rule__Greeting__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Greeting__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGreetingAccess().getNameAssignment_1()); }
-	(rule__Greeting__NameAssignment_1)
-	{ after(grammarAccess.getGreetingAccess().getNameAssignment_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Greeting__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Greeting__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Greeting__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); }
-	'!'
-	{ after(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Model__GreetingsAssignment
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
+	:
 	(
-		{ before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); }
-		ruleGreeting
-		{ after(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); }
+		(
+			{ before(grammarAccess.getMoveAccess().getAlternatives()); }
+			(rule__Move__Alternatives)
+			{ after(grammarAccess.getMoveAccess().getAlternatives()); }
+		)
+		(
+			{ before(grammarAccess.getMoveAccess().getAlternatives()); }
+			(rule__Move__Alternatives)*
+			{ after(grammarAccess.getMoveAccess().getAlternatives()); }
+		)
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Greeting__NameAssignment_1
+// Entry rule entryRuleStat
+entryRuleStat
+:
+{ before(grammarAccess.getStatRule()); }
+	 ruleStat
+{ after(grammarAccess.getStatRule()); } 
+	 EOF 
+;
+
+// Rule Stat
+ruleStat 
 	@init {
 		int stackSize = keepStackSize();
 	}
-:
+	:
 	(
-		{ before(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getStatAccess().getGroup()); }
+		(rule__Stat__Group__0)
+		{ after(grammarAccess.getStatAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleShiny
+entryRuleShiny
+:
+{ before(grammarAccess.getShinyRule()); }
+	 ruleShiny
+{ after(grammarAccess.getShinyRule()); } 
+	 EOF 
+;
+
+// Rule Shiny
+ruleShiny 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getShinyAccess().getYesKeyword()); }
+		'Yes'
+		{ after(grammarAccess.getShinyAccess().getYesKeyword()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleSpecie
+entryRuleSpecie
+:
+{ before(grammarAccess.getSpecieRule()); }
+	 ruleSpecie
+{ after(grammarAccess.getSpecieRule()); } 
+	 EOF 
+;
+
+// Rule Specie
+ruleSpecie 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getSpecieAccess().getIDTerminalRuleCall()); }
 		RULE_ID
-		{ after(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); }
+		{ after(grammarAccess.getSpecieAccess().getIDTerminalRuleCall()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleNickname
+entryRuleNickname
+:
+{ before(grammarAccess.getNicknameRule()); }
+	 ruleNickname
+{ after(grammarAccess.getNicknameRule()); } 
+	 EOF 
+;
+
+// Rule Nickname
+ruleNickname 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getNicknameAccess().getIDTerminalRuleCall()); }
+		RULE_ID
+		{ after(grammarAccess.getNicknameAccess().getIDTerminalRuleCall()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleAbility
+entryRuleAbility
+:
+{ before(grammarAccess.getAbilityRule()); }
+	 ruleAbility
+{ after(grammarAccess.getAbilityRule()); } 
+	 EOF 
+;
+
+// Rule Ability
+ruleAbility 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		(
+			{ before(grammarAccess.getAbilityAccess().getIDTerminalRuleCall()); }
+			(RULE_ID)
+			{ after(grammarAccess.getAbilityAccess().getIDTerminalRuleCall()); }
+		)
+		(
+			{ before(grammarAccess.getAbilityAccess().getIDTerminalRuleCall()); }
+			(RULE_ID)*
+			{ after(grammarAccess.getAbilityAccess().getIDTerminalRuleCall()); }
+		)
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Alternatives_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getGroup_0_0()); }
+		(rule__Pokemon__Group_0_0__0)
+		{ after(grammarAccess.getPokemonAccess().getGroup_0_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getPokemonAccess().getSpecieAssignment_0_1()); }
+		(rule__Pokemon__SpecieAssignment_0_1)
+		{ after(grammarAccess.getPokemonAccess().getSpecieAssignment_0_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Move__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMoveAccess().getIDTerminalRuleCall_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMoveAccess().getIDTerminalRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMoveAccess().getHyphenMinusKeyword_1()); }
+		'-'
+		{ after(grammarAccess.getMoveAccess().getHyphenMinusKeyword_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Stat__Alternatives_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getStatAccess().getHPKeyword_1_0()); }
+		'HP'
+		{ after(grammarAccess.getStatAccess().getHPKeyword_1_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getStatAccess().getAtkKeyword_1_1()); }
+		'Atk'
+		{ after(grammarAccess.getStatAccess().getAtkKeyword_1_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getStatAccess().getDefKeyword_1_2()); }
+		'Def'
+		{ after(grammarAccess.getStatAccess().getDefKeyword_1_2()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getStatAccess().getSpAKeyword_1_3()); }
+		'SpA'
+		{ after(grammarAccess.getStatAccess().getSpAKeyword_1_3()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getStatAccess().getSpDKeyword_1_4()); }
+		'SpD'
+		{ after(grammarAccess.getStatAccess().getSpDKeyword_1_4()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getStatAccess().getSpeKeyword_1_5()); }
+		'Spe'
+		{ after(grammarAccess.getStatAccess().getSpeKeyword_1_5()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__0__Impl
+	rule__Pokemon__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getAlternatives_0()); }
+	(rule__Pokemon__Alternatives_0)
+	{ after(grammarAccess.getPokemonAccess().getAlternatives_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__1__Impl
+	rule__Pokemon__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getCommercialAtKeyword_1()); }
+	'@'
+	{ after(grammarAccess.getPokemonAccess().getCommercialAtKeyword_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__2__Impl
+	rule__Pokemon__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getItemAssignment_2()); }
+	(rule__Pokemon__ItemAssignment_2)
+	{ after(grammarAccess.getPokemonAccess().getItemAssignment_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__3__Impl
+	rule__Pokemon__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getAbilityKeyword_3()); }
+	'Ability'
+	{ after(grammarAccess.getPokemonAccess().getAbilityKeyword_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__4__Impl
+	rule__Pokemon__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getColonKeyword_4()); }
+	':'
+	{ after(grammarAccess.getPokemonAccess().getColonKeyword_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__5__Impl
+	rule__Pokemon__Group__6
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getAbilityAssignment_5()); }
+	(rule__Pokemon__AbilityAssignment_5)
+	{ after(grammarAccess.getPokemonAccess().getAbilityAssignment_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__6__Impl
+	rule__Pokemon__Group__7
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__6__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_6()); }
+	(rule__Pokemon__Group_6__0)?
+	{ after(grammarAccess.getPokemonAccess().getGroup_6()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__7
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__7__Impl
+	rule__Pokemon__Group__8
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__7__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_7()); }
+	(rule__Pokemon__Group_7__0)?
+	{ after(grammarAccess.getPokemonAccess().getGroup_7()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__8
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__8__Impl
+	rule__Pokemon__Group__9
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__8__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_8()); }
+	(rule__Pokemon__Group_8__0)?
+	{ after(grammarAccess.getPokemonAccess().getGroup_8()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__9
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__9__Impl
+	rule__Pokemon__Group__10
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__9__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_9()); }
+	(rule__Pokemon__Group_9__0)?
+	{ after(grammarAccess.getPokemonAccess().getGroup_9()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__10
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__10__Impl
+	rule__Pokemon__Group__11
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__10__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_10()); }
+	(rule__Pokemon__Group_10__0)?
+	{ after(grammarAccess.getPokemonAccess().getGroup_10()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__11
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__11__Impl
+	rule__Pokemon__Group__12
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__11__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_11()); }
+	(rule__Pokemon__Group_11__0)?
+	{ after(grammarAccess.getPokemonAccess().getGroup_11()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__12
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group__12__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group__12__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	(
+		{ before(grammarAccess.getPokemonAccess().getGroup_12()); }
+		(rule__Pokemon__Group_12__0)
+		{ after(grammarAccess.getPokemonAccess().getGroup_12()); }
+	)
+	(
+		{ before(grammarAccess.getPokemonAccess().getGroup_12()); }
+		(rule__Pokemon__Group_12__0)*
+		{ after(grammarAccess.getPokemonAccess().getGroup_12()); }
+	)
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_0_0__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_0_0__0__Impl
+	rule__Pokemon__Group_0_0__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_0_0__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getNickAssignment_0_0_0()); }
+	(rule__Pokemon__NickAssignment_0_0_0)
+	{ after(grammarAccess.getPokemonAccess().getNickAssignment_0_0_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_0_0__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_0_0__1__Impl
+	rule__Pokemon__Group_0_0__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_0_0__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getLeftParenthesisKeyword_0_0_1()); }
+	'('
+	{ after(grammarAccess.getPokemonAccess().getLeftParenthesisKeyword_0_0_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_0_0__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_0_0__2__Impl
+	rule__Pokemon__Group_0_0__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_0_0__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getSpecieAssignment_0_0_2()); }
+	(rule__Pokemon__SpecieAssignment_0_0_2)
+	{ after(grammarAccess.getPokemonAccess().getSpecieAssignment_0_0_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_0_0__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_0_0__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_0_0__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getRightParenthesisKeyword_0_0_3()); }
+	')'
+	{ after(grammarAccess.getPokemonAccess().getRightParenthesisKeyword_0_0_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_6__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_6__0__Impl
+	rule__Pokemon__Group_6__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_6__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getLevelKeyword_6_0()); }
+	'Level'
+	{ after(grammarAccess.getPokemonAccess().getLevelKeyword_6_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_6__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_6__1__Impl
+	rule__Pokemon__Group_6__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_6__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getColonKeyword_6_1()); }
+	':'
+	{ after(grammarAccess.getPokemonAccess().getColonKeyword_6_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_6__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_6__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_6__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getLevelAssignment_6_2()); }
+	(rule__Pokemon__LevelAssignment_6_2)
+	{ after(grammarAccess.getPokemonAccess().getLevelAssignment_6_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_7__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_7__0__Impl
+	rule__Pokemon__Group_7__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_7__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getShinyKeyword_7_0()); }
+	'Shiny'
+	{ after(grammarAccess.getPokemonAccess().getShinyKeyword_7_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_7__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_7__1__Impl
+	rule__Pokemon__Group_7__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_7__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getColonKeyword_7_1()); }
+	':'
+	{ after(grammarAccess.getPokemonAccess().getColonKeyword_7_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_7__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_7__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_7__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getShinyAssignment_7_2()); }
+	(rule__Pokemon__ShinyAssignment_7_2)
+	{ after(grammarAccess.getPokemonAccess().getShinyAssignment_7_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_8__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_8__0__Impl
+	rule__Pokemon__Group_8__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_8__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getHappinessKeyword_8_0()); }
+	'Happiness'
+	{ after(grammarAccess.getPokemonAccess().getHappinessKeyword_8_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_8__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_8__1__Impl
+	rule__Pokemon__Group_8__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_8__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getColonKeyword_8_1()); }
+	':'
+	{ after(grammarAccess.getPokemonAccess().getColonKeyword_8_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_8__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_8__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_8__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getHappinessAssignment_8_2()); }
+	(rule__Pokemon__HappinessAssignment_8_2)
+	{ after(grammarAccess.getPokemonAccess().getHappinessAssignment_8_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_9__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_9__0__Impl
+	rule__Pokemon__Group_9__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getEVsKeyword_9_0()); }
+	'EVs'
+	{ after(grammarAccess.getPokemonAccess().getEVsKeyword_9_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_9__1__Impl
+	rule__Pokemon__Group_9__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getColonKeyword_9_1()); }
+	':'
+	{ after(grammarAccess.getPokemonAccess().getColonKeyword_9_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_9__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_9_2()); }
+	(rule__Pokemon__Group_9_2__0)*
+	{ after(grammarAccess.getPokemonAccess().getGroup_9_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_9_2__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_9_2__0__Impl
+	rule__Pokemon__Group_9_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9_2__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getEvsAssignment_9_2_0()); }
+	(rule__Pokemon__EvsAssignment_9_2_0)
+	{ after(grammarAccess.getPokemonAccess().getEvsAssignment_9_2_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9_2__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_9_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_9_2__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getSolidusKeyword_9_2_1()); }
+	('/')?
+	{ after(grammarAccess.getPokemonAccess().getSolidusKeyword_9_2_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_10__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_10__0__Impl
+	rule__Pokemon__Group_10__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_10__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getNatureAssignment_10_0()); }
+	(rule__Pokemon__NatureAssignment_10_0)
+	{ after(grammarAccess.getPokemonAccess().getNatureAssignment_10_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_10__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_10__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_10__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getNatureKeyword_10_1()); }
+	'Nature'
+	{ after(grammarAccess.getPokemonAccess().getNatureKeyword_10_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_11__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_11__0__Impl
+	rule__Pokemon__Group_11__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getIVsKeyword_11_0()); }
+	'IVs'
+	{ after(grammarAccess.getPokemonAccess().getIVsKeyword_11_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_11__1__Impl
+	rule__Pokemon__Group_11__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getColonKeyword_11_1()); }
+	':'
+	{ after(grammarAccess.getPokemonAccess().getColonKeyword_11_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_11__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getGroup_11_2()); }
+	(rule__Pokemon__Group_11_2__0)*
+	{ after(grammarAccess.getPokemonAccess().getGroup_11_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_11_2__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_11_2__0__Impl
+	rule__Pokemon__Group_11_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11_2__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getIvsAssignment_11_2_0()); }
+	(rule__Pokemon__IvsAssignment_11_2_0)
+	{ after(grammarAccess.getPokemonAccess().getIvsAssignment_11_2_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11_2__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_11_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_11_2__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getSolidusKeyword_11_2_1()); }
+	('/')?
+	{ after(grammarAccess.getPokemonAccess().getSolidusKeyword_11_2_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Pokemon__Group_12__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_12__0__Impl
+	rule__Pokemon__Group_12__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_12__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getHyphenMinusKeyword_12_0()); }
+	'-'
+	{ after(grammarAccess.getPokemonAccess().getHyphenMinusKeyword_12_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_12__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Pokemon__Group_12__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__Group_12__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPokemonAccess().getMovesAssignment_12_1()); }
+	(rule__Pokemon__MovesAssignment_12_1)
+	{ after(grammarAccess.getPokemonAccess().getMovesAssignment_12_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Stat__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Stat__Group__0__Impl
+	rule__Stat__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Stat__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getStatAccess().getValueAssignment_0()); }
+	(rule__Stat__ValueAssignment_0)
+	{ after(grammarAccess.getStatAccess().getValueAssignment_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Stat__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Stat__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Stat__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getStatAccess().getAlternatives_1()); }
+	(rule__Stat__Alternatives_1)
+	{ after(grammarAccess.getStatAccess().getAlternatives_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Team__ElementsAssignment
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getTeamAccess().getElementsPokemonParserRuleCall_0()); }
+		rulePokemon
+		{ after(grammarAccess.getTeamAccess().getElementsPokemonParserRuleCall_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__NickAssignment_0_0_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getNickNicknameParserRuleCall_0_0_0_0()); }
+		ruleNickname
+		{ after(grammarAccess.getPokemonAccess().getNickNicknameParserRuleCall_0_0_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__SpecieAssignment_0_0_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getSpecieSpecieParserRuleCall_0_0_2_0()); }
+		ruleSpecie
+		{ after(grammarAccess.getPokemonAccess().getSpecieSpecieParserRuleCall_0_0_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__SpecieAssignment_0_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getSpecieSpecieParserRuleCall_0_1_0()); }
+		ruleSpecie
+		{ after(grammarAccess.getPokemonAccess().getSpecieSpecieParserRuleCall_0_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__ItemAssignment_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getItemIDTerminalRuleCall_2_0()); }
+		RULE_ID
+		{ after(grammarAccess.getPokemonAccess().getItemIDTerminalRuleCall_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__AbilityAssignment_5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getAbilityAbilityParserRuleCall_5_0()); }
+		ruleAbility
+		{ after(grammarAccess.getPokemonAccess().getAbilityAbilityParserRuleCall_5_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__LevelAssignment_6_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getLevelINTTerminalRuleCall_6_2_0()); }
+		RULE_INT
+		{ after(grammarAccess.getPokemonAccess().getLevelINTTerminalRuleCall_6_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__ShinyAssignment_7_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getShinyShinyParserRuleCall_7_2_0()); }
+		ruleShiny
+		{ after(grammarAccess.getPokemonAccess().getShinyShinyParserRuleCall_7_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__HappinessAssignment_8_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getHappinessINTTerminalRuleCall_8_2_0()); }
+		RULE_INT
+		{ after(grammarAccess.getPokemonAccess().getHappinessINTTerminalRuleCall_8_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__EvsAssignment_9_2_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getEvsStatParserRuleCall_9_2_0_0()); }
+		ruleStat
+		{ after(grammarAccess.getPokemonAccess().getEvsStatParserRuleCall_9_2_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__NatureAssignment_10_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getNatureIDTerminalRuleCall_10_0_0()); }
+		RULE_ID
+		{ after(grammarAccess.getPokemonAccess().getNatureIDTerminalRuleCall_10_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__IvsAssignment_11_2_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getIvsStatParserRuleCall_11_2_0_0()); }
+		ruleStat
+		{ after(grammarAccess.getPokemonAccess().getIvsStatParserRuleCall_11_2_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Pokemon__MovesAssignment_12_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getPokemonAccess().getMovesMoveParserRuleCall_12_1_0()); }
+		ruleMove
+		{ after(grammarAccess.getPokemonAccess().getMovesMoveParserRuleCall_12_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Stat__ValueAssignment_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getStatAccess().getValueINTTerminalRuleCall_0_0()); }
+		RULE_INT
+		{ after(grammarAccess.getStatAccess().getValueINTTerminalRuleCall_0_0()); }
 	)
 ;
 finally {

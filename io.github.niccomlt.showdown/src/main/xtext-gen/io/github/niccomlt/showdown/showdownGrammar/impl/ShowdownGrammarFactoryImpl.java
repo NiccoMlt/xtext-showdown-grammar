@@ -65,8 +65,9 @@ public class ShowdownGrammarFactoryImpl extends EFactoryImpl implements Showdown
   {
     switch (eClass.getClassifierID())
     {
-      case ShowdownGrammarPackage.MODEL: return createModel();
-      case ShowdownGrammarPackage.GREETING: return createGreeting();
+      case ShowdownGrammarPackage.TEAM: return createTeam();
+      case ShowdownGrammarPackage.POKEMON: return createPokemon();
+      case ShowdownGrammarPackage.STAT: return createStat();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -78,10 +79,10 @@ public class ShowdownGrammarFactoryImpl extends EFactoryImpl implements Showdown
    * @generated
    */
   @Override
-  public Model createModel()
+  public Team createTeam()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    TeamImpl team = new TeamImpl();
+    return team;
   }
 
   /**
@@ -90,10 +91,22 @@ public class ShowdownGrammarFactoryImpl extends EFactoryImpl implements Showdown
    * @generated
    */
   @Override
-  public Greeting createGreeting()
+  public Pokemon createPokemon()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    PokemonImpl pokemon = new PokemonImpl();
+    return pokemon;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Stat createStat()
+  {
+    StatImpl stat = new StatImpl();
+    return stat;
   }
 
   /**

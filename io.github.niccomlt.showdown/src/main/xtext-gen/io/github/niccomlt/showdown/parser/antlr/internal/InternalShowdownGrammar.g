@@ -43,7 +43,7 @@ import io.github.niccomlt.showdown.services.ShowdownGrammarGrammarAccess;
 
     @Override
     protected String getFirstRuleName() {
-    	return "Model";
+    	return "Team";
    	}
 
    	@Override
@@ -60,15 +60,15 @@ import io.github.niccomlt.showdown.services.ShowdownGrammarGrammarAccess;
     }
 }
 
-// Entry rule entryRuleModel
-entryRuleModel returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getModelRule()); }
-	iv_ruleModel=ruleModel
-	{ $current=$iv_ruleModel.current; }
+// Entry rule entryRuleTeam
+entryRuleTeam returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTeamRule()); }
+	iv_ruleTeam=ruleTeam
+	{ $current=$iv_ruleTeam.current; }
 	EOF;
 
-// Rule Model
-ruleModel returns [EObject current=null]
+// Rule Team
+ruleTeam returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -78,33 +78,33 @@ ruleModel returns [EObject current=null]
 	(
 		(
 			{
-				newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0());
+				newCompositeNode(grammarAccess.getTeamAccess().getElementsPokemonParserRuleCall_0());
 			}
-			lv_greetings_0_0=ruleGreeting
+			lv_elements_0_0=rulePokemon
 			{
 				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getModelRule());
+					$current = createModelElementForParent(grammarAccess.getTeamRule());
 				}
 				add(
 					$current,
-					"greetings",
-					lv_greetings_0_0,
-					"io.github.niccomlt.showdown.ShowdownGrammar.Greeting");
+					"elements",
+					lv_elements_0_0,
+					"io.github.niccomlt.showdown.ShowdownGrammar.Pokemon");
 				afterParserOrEnumRuleCall();
 			}
 		)
 	)*
 ;
 
-// Entry rule entryRuleGreeting
-entryRuleGreeting returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGreetingRule()); }
-	iv_ruleGreeting=ruleGreeting
-	{ $current=$iv_ruleGreeting.current; }
+// Entry rule entryRulePokemon
+entryRulePokemon returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPokemonRule()); }
+	iv_rulePokemon=rulePokemon
+	{ $current=$iv_rulePokemon.current; }
 	EOF;
 
-// Rule Greeting
-ruleGreeting returns [EObject current=null]
+// Rule Pokemon
+rulePokemon returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -112,33 +112,530 @@ ruleGreeting returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='Hello'
+		(
+			(
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getPokemonAccess().getNickNicknameParserRuleCall_0_0_0_0());
+						}
+						lv_nick_0_0=ruleNickname
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getPokemonRule());
+							}
+							set(
+								$current,
+								"nick",
+								lv_nick_0_0,
+								"io.github.niccomlt.showdown.ShowdownGrammar.Nickname");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				otherlv_1='('
+				{
+					newLeafNode(otherlv_1, grammarAccess.getPokemonAccess().getLeftParenthesisKeyword_0_0_1());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getPokemonAccess().getSpecieSpecieParserRuleCall_0_0_2_0());
+						}
+						lv_specie_2_0=ruleSpecie
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getPokemonRule());
+							}
+							set(
+								$current,
+								"specie",
+								lv_specie_2_0,
+								"io.github.niccomlt.showdown.ShowdownGrammar.Specie");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				otherlv_3=')'
+				{
+					newLeafNode(otherlv_3, grammarAccess.getPokemonAccess().getRightParenthesisKeyword_0_0_3());
+				}
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getPokemonAccess().getSpecieSpecieParserRuleCall_0_1_0());
+					}
+					lv_specie_4_0=ruleSpecie
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getPokemonRule());
+						}
+						set(
+							$current,
+							"specie",
+							lv_specie_4_0,
+							"io.github.niccomlt.showdown.ShowdownGrammar.Specie");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		otherlv_5='@'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getHelloKeyword_0());
+			newLeafNode(otherlv_5, grammarAccess.getPokemonAccess().getCommercialAtKeyword_1());
 		}
 		(
 			(
-				lv_name_1_0=RULE_ID
+				lv_item_6_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_item_6_0, grammarAccess.getPokemonAccess().getItemIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGreetingRule());
+						$current = createModelElement(grammarAccess.getPokemonRule());
 					}
 					setWithLastConsumed(
 						$current,
-						"name",
-						lv_name_1_0,
+						"item",
+						lv_item_6_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		otherlv_2='!'
+		otherlv_7='Ability'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2());
+			newLeafNode(otherlv_7, grammarAccess.getPokemonAccess().getAbilityKeyword_3());
 		}
+		otherlv_8=':'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getPokemonAccess().getColonKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPokemonAccess().getAbilityAbilityParserRuleCall_5_0());
+				}
+				lv_ability_9_0=ruleAbility
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPokemonRule());
+					}
+					set(
+						$current,
+						"ability",
+						lv_ability_9_0,
+						"io.github.niccomlt.showdown.ShowdownGrammar.Ability");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_10='Level'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getPokemonAccess().getLevelKeyword_6_0());
+			}
+			otherlv_11=':'
+			{
+				newLeafNode(otherlv_11, grammarAccess.getPokemonAccess().getColonKeyword_6_1());
+			}
+			(
+				(
+					lv_level_12_0=RULE_INT
+					{
+						newLeafNode(lv_level_12_0, grammarAccess.getPokemonAccess().getLevelINTTerminalRuleCall_6_2_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPokemonRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"level",
+							lv_level_12_0,
+							"org.eclipse.xtext.common.Terminals.INT");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_13='Shiny'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getPokemonAccess().getShinyKeyword_7_0());
+			}
+			otherlv_14=':'
+			{
+				newLeafNode(otherlv_14, grammarAccess.getPokemonAccess().getColonKeyword_7_1());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getPokemonAccess().getShinyShinyParserRuleCall_7_2_0());
+					}
+					lv_shiny_15_0=ruleShiny
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getPokemonRule());
+						}
+						set(
+							$current,
+							"shiny",
+							lv_shiny_15_0,
+							"io.github.niccomlt.showdown.ShowdownGrammar.Shiny");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_16='Happiness'
+			{
+				newLeafNode(otherlv_16, grammarAccess.getPokemonAccess().getHappinessKeyword_8_0());
+			}
+			otherlv_17=':'
+			{
+				newLeafNode(otherlv_17, grammarAccess.getPokemonAccess().getColonKeyword_8_1());
+			}
+			(
+				(
+					lv_happiness_18_0=RULE_INT
+					{
+						newLeafNode(lv_happiness_18_0, grammarAccess.getPokemonAccess().getHappinessINTTerminalRuleCall_8_2_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPokemonRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"happiness",
+							lv_happiness_18_0,
+							"org.eclipse.xtext.common.Terminals.INT");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_19='EVs'
+			{
+				newLeafNode(otherlv_19, grammarAccess.getPokemonAccess().getEVsKeyword_9_0());
+			}
+			otherlv_20=':'
+			{
+				newLeafNode(otherlv_20, grammarAccess.getPokemonAccess().getColonKeyword_9_1());
+			}
+			(
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getPokemonAccess().getEvsStatParserRuleCall_9_2_0_0());
+						}
+						lv_evs_21_0=ruleStat
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getPokemonRule());
+							}
+							add(
+								$current,
+								"evs",
+								lv_evs_21_0,
+								"io.github.niccomlt.showdown.ShowdownGrammar.Stat");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				(
+					otherlv_22='/'
+					{
+						newLeafNode(otherlv_22, grammarAccess.getPokemonAccess().getSolidusKeyword_9_2_1());
+					}
+				)?
+			)*
+		)?
+		(
+			(
+				(
+					lv_nature_23_0=RULE_ID
+					{
+						newLeafNode(lv_nature_23_0, grammarAccess.getPokemonAccess().getNatureIDTerminalRuleCall_10_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPokemonRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"nature",
+							lv_nature_23_0,
+							"org.eclipse.xtext.common.Terminals.ID");
+					}
+				)
+			)
+			otherlv_24='Nature'
+			{
+				newLeafNode(otherlv_24, grammarAccess.getPokemonAccess().getNatureKeyword_10_1());
+			}
+		)?
+		(
+			otherlv_25='IVs'
+			{
+				newLeafNode(otherlv_25, grammarAccess.getPokemonAccess().getIVsKeyword_11_0());
+			}
+			otherlv_26=':'
+			{
+				newLeafNode(otherlv_26, grammarAccess.getPokemonAccess().getColonKeyword_11_1());
+			}
+			(
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getPokemonAccess().getIvsStatParserRuleCall_11_2_0_0());
+						}
+						lv_ivs_27_0=ruleStat
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getPokemonRule());
+							}
+							add(
+								$current,
+								"ivs",
+								lv_ivs_27_0,
+								"io.github.niccomlt.showdown.ShowdownGrammar.Stat");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				(
+					otherlv_28='/'
+					{
+						newLeafNode(otherlv_28, grammarAccess.getPokemonAccess().getSolidusKeyword_11_2_1());
+					}
+				)?
+			)*
+		)?
+		(
+			otherlv_29='-'
+			{
+				newLeafNode(otherlv_29, grammarAccess.getPokemonAccess().getHyphenMinusKeyword_12_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getPokemonAccess().getMovesMoveParserRuleCall_12_1_0());
+					}
+					lv_moves_30_0=ruleMove
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getPokemonRule());
+						}
+						add(
+							$current,
+							"moves",
+							lv_moves_30_0,
+							"io.github.niccomlt.showdown.ShowdownGrammar.Move");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)+
 	)
+;
+
+// Entry rule entryRuleMove
+entryRuleMove returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getMoveRule()); }
+	iv_ruleMove=ruleMove
+	{ $current=$iv_ruleMove.current.getText(); }
+	EOF;
+
+// Rule Move
+ruleMove returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_ID_0=RULE_ID
+		{
+			$current.merge(this_ID_0);
+		}
+		{
+			newLeafNode(this_ID_0, grammarAccess.getMoveAccess().getIDTerminalRuleCall_0());
+		}
+		    |
+		kw='-'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getMoveAccess().getHyphenMinusKeyword_1());
+		}
+	)+
+;
+
+// Entry rule entryRuleStat
+entryRuleStat returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStatRule()); }
+	iv_ruleStat=ruleStat
+	{ $current=$iv_ruleStat.current; }
+	EOF;
+
+// Rule Stat
+ruleStat returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_value_0_0=RULE_INT
+				{
+					newLeafNode(lv_value_0_0, grammarAccess.getStatAccess().getValueINTTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getStatRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_0_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		(
+			otherlv_1='HP'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getStatAccess().getHPKeyword_1_0());
+			}
+			    |
+			otherlv_2='Atk'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getStatAccess().getAtkKeyword_1_1());
+			}
+			    |
+			otherlv_3='Def'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getStatAccess().getDefKeyword_1_2());
+			}
+			    |
+			otherlv_4='SpA'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getStatAccess().getSpAKeyword_1_3());
+			}
+			    |
+			otherlv_5='SpD'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getStatAccess().getSpDKeyword_1_4());
+			}
+			    |
+			otherlv_6='Spe'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getStatAccess().getSpeKeyword_1_5());
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleShiny
+entryRuleShiny returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getShinyRule()); }
+	iv_ruleShiny=ruleShiny
+	{ $current=$iv_ruleShiny.current.getText(); }
+	EOF;
+
+// Rule Shiny
+ruleShiny returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	kw='Yes'
+	{
+		$current.merge(kw);
+		newLeafNode(kw, grammarAccess.getShinyAccess().getYesKeyword());
+	}
+;
+
+// Entry rule entryRuleSpecie
+entryRuleSpecie returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getSpecieRule()); }
+	iv_ruleSpecie=ruleSpecie
+	{ $current=$iv_ruleSpecie.current.getText(); }
+	EOF;
+
+// Rule Specie
+ruleSpecie returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	this_ID_0=RULE_ID
+	{
+		$current.merge(this_ID_0);
+	}
+	{
+		newLeafNode(this_ID_0, grammarAccess.getSpecieAccess().getIDTerminalRuleCall());
+	}
+;
+
+// Entry rule entryRuleNickname
+entryRuleNickname returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getNicknameRule()); }
+	iv_ruleNickname=ruleNickname
+	{ $current=$iv_ruleNickname.current.getText(); }
+	EOF;
+
+// Rule Nickname
+ruleNickname returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	this_ID_0=RULE_ID
+	{
+		$current.merge(this_ID_0);
+	}
+	{
+		newLeafNode(this_ID_0, grammarAccess.getNicknameAccess().getIDTerminalRuleCall());
+	}
+;
+
+// Entry rule entryRuleAbility
+entryRuleAbility returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getAbilityRule()); }
+	iv_ruleAbility=ruleAbility
+	{ $current=$iv_ruleAbility.current.getText(); }
+	EOF;
+
+// Rule Ability
+ruleAbility returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_ID_0=RULE_ID
+		{
+			$current.merge(this_ID_0);
+		}
+		{
+			newLeafNode(this_ID_0, grammarAccess.getAbilityAccess().getIDTerminalRuleCall());
+		}
+	)+
 ;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

@@ -27,7 +27,7 @@ public class ShowdownGrammarParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "Team";
 	}
 
 	public ShowdownGrammarGrammarAccess getGrammarAccess() {

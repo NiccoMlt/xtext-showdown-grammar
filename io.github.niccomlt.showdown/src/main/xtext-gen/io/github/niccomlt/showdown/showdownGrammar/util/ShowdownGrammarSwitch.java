@@ -73,17 +73,24 @@ public class ShowdownGrammarSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case ShowdownGrammarPackage.MODEL:
+      case ShowdownGrammarPackage.TEAM:
       {
-        Model model = (Model)theEObject;
-        T result = caseModel(model);
+        Team team = (Team)theEObject;
+        T result = caseTeam(team);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ShowdownGrammarPackage.GREETING:
+      case ShowdownGrammarPackage.POKEMON:
       {
-        Greeting greeting = (Greeting)theEObject;
-        T result = caseGreeting(greeting);
+        Pokemon pokemon = (Pokemon)theEObject;
+        T result = casePokemon(pokemon);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ShowdownGrammarPackage.STAT:
+      {
+        Stat stat = (Stat)theEObject;
+        T result = caseStat(stat);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -92,33 +99,49 @@ public class ShowdownGrammarSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Team</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Team</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModel(Model object)
+  public T caseTeam(Team object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pokemon</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pokemon</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGreeting(Greeting object)
+  public T casePokemon(Pokemon object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Stat</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Stat</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStat(Stat object)
   {
     return null;
   }

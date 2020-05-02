@@ -76,14 +76,19 @@ public class ShowdownGrammarAdapterFactory extends AdapterFactoryImpl
     new ShowdownGrammarSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter caseTeam(Team object)
       {
-        return createModelAdapter();
+        return createTeamAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter casePokemon(Pokemon object)
       {
-        return createGreetingAdapter();
+        return createPokemonAdapter();
+      }
+      @Override
+      public Adapter caseStat(Stat object)
+      {
+        return createStatAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -108,31 +113,46 @@ public class ShowdownGrammarAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link io.github.niccomlt.showdown.showdownGrammar.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link io.github.niccomlt.showdown.showdownGrammar.Team <em>Team</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see io.github.niccomlt.showdown.showdownGrammar.Model
+   * @see io.github.niccomlt.showdown.showdownGrammar.Team
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createTeamAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link io.github.niccomlt.showdown.showdownGrammar.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link io.github.niccomlt.showdown.showdownGrammar.Pokemon <em>Pokemon</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see io.github.niccomlt.showdown.showdownGrammar.Greeting
+   * @see io.github.niccomlt.showdown.showdownGrammar.Pokemon
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createPokemonAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.github.niccomlt.showdown.showdownGrammar.Stat <em>Stat</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.github.niccomlt.showdown.showdownGrammar.Stat
+   * @generated
+   */
+  public Adapter createStatAdapter()
   {
     return null;
   }

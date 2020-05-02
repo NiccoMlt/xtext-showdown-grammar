@@ -6,6 +6,7 @@ package io.github.niccomlt.showdown.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
@@ -21,52 +22,372 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class ShowdownGrammarGrammarAccess extends AbstractGrammarElementFinder {
 	
-	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Model");
-		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
+	public class TeamElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Team");
+		private final Assignment cElementsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cElementsPokemonParserRuleCall_0 = (RuleCall)cElementsAssignment.eContents().get(0);
 		
-		//Model:
-		//	greetings+=Greeting*;
+		//Team:
+		//	elements+=Pokemon*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//greetings+=Greeting*
-		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
+		//elements+=Pokemon*
+		public Assignment getElementsAssignment() { return cElementsAssignment; }
 		
-		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
+		//Pokemon
+		public RuleCall getElementsPokemonParserRuleCall_0() { return cElementsPokemonParserRuleCall_0; }
 	}
-	public class GreetingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Greeting");
+	public class PokemonElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Pokemon");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHelloKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cExclamationMarkKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Group cGroup_0_0 = (Group)cAlternatives_0.eContents().get(0);
+		private final Assignment cNickAssignment_0_0_0 = (Assignment)cGroup_0_0.eContents().get(0);
+		private final RuleCall cNickNicknameParserRuleCall_0_0_0_0 = (RuleCall)cNickAssignment_0_0_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_0_0_1 = (Keyword)cGroup_0_0.eContents().get(1);
+		private final Assignment cSpecieAssignment_0_0_2 = (Assignment)cGroup_0_0.eContents().get(2);
+		private final RuleCall cSpecieSpecieParserRuleCall_0_0_2_0 = (RuleCall)cSpecieAssignment_0_0_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_0_0_3 = (Keyword)cGroup_0_0.eContents().get(3);
+		private final Assignment cSpecieAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cSpecieSpecieParserRuleCall_0_1_0 = (RuleCall)cSpecieAssignment_0_1.eContents().get(0);
+		private final Keyword cCommercialAtKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cItemAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cItemIDTerminalRuleCall_2_0 = (RuleCall)cItemAssignment_2.eContents().get(0);
+		private final Keyword cAbilityKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cColonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cAbilityAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cAbilityAbilityParserRuleCall_5_0 = (RuleCall)cAbilityAssignment_5.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cLevelKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cColonKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cLevelAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cLevelINTTerminalRuleCall_6_2_0 = (RuleCall)cLevelAssignment_6_2.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cShinyKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Keyword cColonKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Assignment cShinyAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
+		private final RuleCall cShinyShinyParserRuleCall_7_2_0 = (RuleCall)cShinyAssignment_7_2.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cHappinessKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Keyword cColonKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
+		private final Assignment cHappinessAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final RuleCall cHappinessINTTerminalRuleCall_8_2_0 = (RuleCall)cHappinessAssignment_8_2.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cEVsKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Keyword cColonKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final Group cGroup_9_2 = (Group)cGroup_9.eContents().get(2);
+		private final Assignment cEvsAssignment_9_2_0 = (Assignment)cGroup_9_2.eContents().get(0);
+		private final RuleCall cEvsStatParserRuleCall_9_2_0_0 = (RuleCall)cEvsAssignment_9_2_0.eContents().get(0);
+		private final Keyword cSolidusKeyword_9_2_1 = (Keyword)cGroup_9_2.eContents().get(1);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Assignment cNatureAssignment_10_0 = (Assignment)cGroup_10.eContents().get(0);
+		private final RuleCall cNatureIDTerminalRuleCall_10_0_0 = (RuleCall)cNatureAssignment_10_0.eContents().get(0);
+		private final Keyword cNatureKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cIVsKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Keyword cColonKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
+		private final Group cGroup_11_2 = (Group)cGroup_11.eContents().get(2);
+		private final Assignment cIvsAssignment_11_2_0 = (Assignment)cGroup_11_2.eContents().get(0);
+		private final RuleCall cIvsStatParserRuleCall_11_2_0_0 = (RuleCall)cIvsAssignment_11_2_0.eContents().get(0);
+		private final Keyword cSolidusKeyword_11_2_1 = (Keyword)cGroup_11_2.eContents().get(1);
+		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
+		private final Keyword cHyphenMinusKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Assignment cMovesAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
+		private final RuleCall cMovesMoveParserRuleCall_12_1_0 = (RuleCall)cMovesAssignment_12_1.eContents().get(0);
 		
-		//Greeting:
-		//	'Hello' name=ID '!';
+		//Pokemon:
+		//	(nick=Nickname '(' specie=Specie ')' | specie=Specie) '@' item=ID
+		//	'Ability' ':' ability=Ability ('Level' ':' level=INT)? ('Shiny' ':' shiny=Shiny)? ('Happiness' ':' happiness=INT)?
+		//	('EVs' ':' (evs+=Stat '/'?)*)? (nature=ID 'Nature')? ('IVs' ':' (ivs+=Stat '/'?)*)? ('-' moves+=Move)+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Hello' name=ID '!'
+		//(nick=Nickname '(' specie=Specie ')' | specie=Specie) '@' item=ID 'Ability' ':' ability=Ability ('Level' ':' level=INT)?
+		//('Shiny' ':' shiny=Shiny)? ('Happiness' ':' happiness=INT)? ('EVs' ':' (evs+=Stat '/'?)*)? (nature=ID 'Nature')? ('IVs'
+		//':' (ivs+=Stat '/'?)*)? ('-' moves+=Move)+
 		public Group getGroup() { return cGroup; }
 		
-		//'Hello'
-		public Keyword getHelloKeyword_0() { return cHelloKeyword_0; }
+		//(nick=Nickname '(' specie=Specie ')' | specie=Specie)
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 		
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//nick=Nickname '(' specie=Specie ')'
+		public Group getGroup_0_0() { return cGroup_0_0; }
+		
+		//nick=Nickname
+		public Assignment getNickAssignment_0_0_0() { return cNickAssignment_0_0_0; }
+		
+		//Nickname
+		public RuleCall getNickNicknameParserRuleCall_0_0_0_0() { return cNickNicknameParserRuleCall_0_0_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_0_0_1() { return cLeftParenthesisKeyword_0_0_1; }
+		
+		//specie=Specie
+		public Assignment getSpecieAssignment_0_0_2() { return cSpecieAssignment_0_0_2; }
+		
+		//Specie
+		public RuleCall getSpecieSpecieParserRuleCall_0_0_2_0() { return cSpecieSpecieParserRuleCall_0_0_2_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_0_0_3() { return cRightParenthesisKeyword_0_0_3; }
+		
+		//specie=Specie
+		public Assignment getSpecieAssignment_0_1() { return cSpecieAssignment_0_1; }
+		
+		//Specie
+		public RuleCall getSpecieSpecieParserRuleCall_0_1_0() { return cSpecieSpecieParserRuleCall_0_1_0; }
+		
+		//'@'
+		public Keyword getCommercialAtKeyword_1() { return cCommercialAtKeyword_1; }
+		
+		//item=ID
+		public Assignment getItemAssignment_2() { return cItemAssignment_2; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getItemIDTerminalRuleCall_2_0() { return cItemIDTerminalRuleCall_2_0; }
 		
-		//'!'
-		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
+		//'Ability'
+		public Keyword getAbilityKeyword_3() { return cAbilityKeyword_3; }
+		
+		//':'
+		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
+		
+		//ability=Ability
+		public Assignment getAbilityAssignment_5() { return cAbilityAssignment_5; }
+		
+		//Ability
+		public RuleCall getAbilityAbilityParserRuleCall_5_0() { return cAbilityAbilityParserRuleCall_5_0; }
+		
+		//('Level' ':' level=INT)?
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//'Level'
+		public Keyword getLevelKeyword_6_0() { return cLevelKeyword_6_0; }
+		
+		//':'
+		public Keyword getColonKeyword_6_1() { return cColonKeyword_6_1; }
+		
+		//level=INT
+		public Assignment getLevelAssignment_6_2() { return cLevelAssignment_6_2; }
+		
+		//INT
+		public RuleCall getLevelINTTerminalRuleCall_6_2_0() { return cLevelINTTerminalRuleCall_6_2_0; }
+		
+		//('Shiny' ':' shiny=Shiny)?
+		public Group getGroup_7() { return cGroup_7; }
+		
+		//'Shiny'
+		public Keyword getShinyKeyword_7_0() { return cShinyKeyword_7_0; }
+		
+		//':'
+		public Keyword getColonKeyword_7_1() { return cColonKeyword_7_1; }
+		
+		//shiny=Shiny
+		public Assignment getShinyAssignment_7_2() { return cShinyAssignment_7_2; }
+		
+		//Shiny
+		public RuleCall getShinyShinyParserRuleCall_7_2_0() { return cShinyShinyParserRuleCall_7_2_0; }
+		
+		//('Happiness' ':' happiness=INT)?
+		public Group getGroup_8() { return cGroup_8; }
+		
+		//'Happiness'
+		public Keyword getHappinessKeyword_8_0() { return cHappinessKeyword_8_0; }
+		
+		//':'
+		public Keyword getColonKeyword_8_1() { return cColonKeyword_8_1; }
+		
+		//happiness=INT
+		public Assignment getHappinessAssignment_8_2() { return cHappinessAssignment_8_2; }
+		
+		//INT
+		public RuleCall getHappinessINTTerminalRuleCall_8_2_0() { return cHappinessINTTerminalRuleCall_8_2_0; }
+		
+		//('EVs' ':' (evs+=Stat '/'?)*)?
+		public Group getGroup_9() { return cGroup_9; }
+		
+		//'EVs'
+		public Keyword getEVsKeyword_9_0() { return cEVsKeyword_9_0; }
+		
+		//':'
+		public Keyword getColonKeyword_9_1() { return cColonKeyword_9_1; }
+		
+		//(evs+=Stat '/'?)*
+		public Group getGroup_9_2() { return cGroup_9_2; }
+		
+		//evs+=Stat
+		public Assignment getEvsAssignment_9_2_0() { return cEvsAssignment_9_2_0; }
+		
+		//Stat
+		public RuleCall getEvsStatParserRuleCall_9_2_0_0() { return cEvsStatParserRuleCall_9_2_0_0; }
+		
+		//'/'?
+		public Keyword getSolidusKeyword_9_2_1() { return cSolidusKeyword_9_2_1; }
+		
+		//(nature=ID 'Nature')?
+		public Group getGroup_10() { return cGroup_10; }
+		
+		//nature=ID
+		public Assignment getNatureAssignment_10_0() { return cNatureAssignment_10_0; }
+		
+		//ID
+		public RuleCall getNatureIDTerminalRuleCall_10_0_0() { return cNatureIDTerminalRuleCall_10_0_0; }
+		
+		//'Nature'
+		public Keyword getNatureKeyword_10_1() { return cNatureKeyword_10_1; }
+		
+		//('IVs' ':' (ivs+=Stat '/'?)*)?
+		public Group getGroup_11() { return cGroup_11; }
+		
+		//'IVs'
+		public Keyword getIVsKeyword_11_0() { return cIVsKeyword_11_0; }
+		
+		//':'
+		public Keyword getColonKeyword_11_1() { return cColonKeyword_11_1; }
+		
+		//(ivs+=Stat '/'?)*
+		public Group getGroup_11_2() { return cGroup_11_2; }
+		
+		//ivs+=Stat
+		public Assignment getIvsAssignment_11_2_0() { return cIvsAssignment_11_2_0; }
+		
+		//Stat
+		public RuleCall getIvsStatParserRuleCall_11_2_0_0() { return cIvsStatParserRuleCall_11_2_0_0; }
+		
+		//'/'?
+		public Keyword getSolidusKeyword_11_2_1() { return cSolidusKeyword_11_2_1; }
+		
+		//('-' moves+=Move)+
+		public Group getGroup_12() { return cGroup_12; }
+		
+		//'-'
+		public Keyword getHyphenMinusKeyword_12_0() { return cHyphenMinusKeyword_12_0; }
+		
+		//moves+=Move
+		public Assignment getMovesAssignment_12_1() { return cMovesAssignment_12_1; }
+		
+		//Move
+		public RuleCall getMovesMoveParserRuleCall_12_1_0() { return cMovesMoveParserRuleCall_12_1_0; }
+	}
+	public class MoveElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Move");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		
+		//Move:
+		//	(ID | '-')+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//(ID | '-')+
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		
+		//'-'
+		public Keyword getHyphenMinusKeyword_1() { return cHyphenMinusKeyword_1; }
+	}
+	public class StatElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Stat");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cValueINTTerminalRuleCall_0_0 = (RuleCall)cValueAssignment_0.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Keyword cHPKeyword_1_0 = (Keyword)cAlternatives_1.eContents().get(0);
+		private final Keyword cAtkKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
+		private final Keyword cDefKeyword_1_2 = (Keyword)cAlternatives_1.eContents().get(2);
+		private final Keyword cSpAKeyword_1_3 = (Keyword)cAlternatives_1.eContents().get(3);
+		private final Keyword cSpDKeyword_1_4 = (Keyword)cAlternatives_1.eContents().get(4);
+		private final Keyword cSpeKeyword_1_5 = (Keyword)cAlternatives_1.eContents().get(5);
+		
+		//Stat:
+		//	value=INT ('HP' | 'Atk' | 'Def' | 'SpA' | 'SpD' | 'Spe');
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value=INT ('HP' | 'Atk' | 'Def' | 'SpA' | 'SpD' | 'Spe')
+		public Group getGroup() { return cGroup; }
+		
+		//value=INT
+		public Assignment getValueAssignment_0() { return cValueAssignment_0; }
+		
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_0_0() { return cValueINTTerminalRuleCall_0_0; }
+		
+		//('HP' | 'Atk' | 'Def' | 'SpA' | 'SpD' | 'Spe')
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		
+		//'HP'
+		public Keyword getHPKeyword_1_0() { return cHPKeyword_1_0; }
+		
+		//'Atk'
+		public Keyword getAtkKeyword_1_1() { return cAtkKeyword_1_1; }
+		
+		//'Def'
+		public Keyword getDefKeyword_1_2() { return cDefKeyword_1_2; }
+		
+		//'SpA'
+		public Keyword getSpAKeyword_1_3() { return cSpAKeyword_1_3; }
+		
+		//'SpD'
+		public Keyword getSpDKeyword_1_4() { return cSpDKeyword_1_4; }
+		
+		//'Spe'
+		public Keyword getSpeKeyword_1_5() { return cSpeKeyword_1_5; }
+	}
+	public class ShinyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Shiny");
+		private final Keyword cYesKeyword = (Keyword)rule.eContents().get(1);
+		
+		//Shiny:
+		//	'Yes';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Yes'
+		public Keyword getYesKeyword() { return cYesKeyword; }
+	}
+	public class SpecieElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Specie");
+		private final RuleCall cIDTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Specie:
+		//	ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall() { return cIDTerminalRuleCall; }
+	}
+	public class NicknameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Nickname");
+		private final RuleCall cIDTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Nickname:
+		//	ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall() { return cIDTerminalRuleCall; }
+	}
+	public class AbilityElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Ability");
+		private final RuleCall cIDTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Ability:
+		//	ID+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ID+
+		public RuleCall getIDTerminalRuleCall() { return cIDTerminalRuleCall; }
 	}
 	
 	
-	private final ModelElements pModel;
-	private final GreetingElements pGreeting;
+	private final TeamElements pTeam;
+	private final PokemonElements pPokemon;
+	private final MoveElements pMove;
+	private final StatElements pStat;
+	private final ShinyElements pShiny;
+	private final SpecieElements pSpecie;
+	private final NicknameElements pNickname;
+	private final AbilityElements pAbility;
 	
 	private final Grammar grammar;
 	
@@ -77,8 +398,14 @@ public class ShowdownGrammarGrammarAccess extends AbstractGrammarElementFinder {
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pModel = new ModelElements();
-		this.pGreeting = new GreetingElements();
+		this.pTeam = new TeamElements();
+		this.pPokemon = new PokemonElements();
+		this.pMove = new MoveElements();
+		this.pStat = new StatElements();
+		this.pShiny = new ShinyElements();
+		this.pSpecie = new SpecieElements();
+		this.pNickname = new NicknameElements();
+		this.pAbility = new AbilityElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -108,24 +435,86 @@ public class ShowdownGrammarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model:
-	//	greetings+=Greeting*;
-	public ModelElements getModelAccess() {
-		return pModel;
+	//Team:
+	//	elements+=Pokemon*;
+	public TeamElements getTeamAccess() {
+		return pTeam;
 	}
 	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
+	public ParserRule getTeamRule() {
+		return getTeamAccess().getRule();
 	}
 	
-	//Greeting:
-	//	'Hello' name=ID '!';
-	public GreetingElements getGreetingAccess() {
-		return pGreeting;
+	//Pokemon:
+	//	(nick=Nickname '(' specie=Specie ')' | specie=Specie) '@' item=ID
+	//	'Ability' ':' ability=Ability ('Level' ':' level=INT)? ('Shiny' ':' shiny=Shiny)? ('Happiness' ':' happiness=INT)?
+	//	('EVs' ':' (evs+=Stat '/'?)*)? (nature=ID 'Nature')? ('IVs' ':' (ivs+=Stat '/'?)*)? ('-' moves+=Move)+;
+	public PokemonElements getPokemonAccess() {
+		return pPokemon;
 	}
 	
-	public ParserRule getGreetingRule() {
-		return getGreetingAccess().getRule();
+	public ParserRule getPokemonRule() {
+		return getPokemonAccess().getRule();
+	}
+	
+	//Move:
+	//	(ID | '-')+;
+	public MoveElements getMoveAccess() {
+		return pMove;
+	}
+	
+	public ParserRule getMoveRule() {
+		return getMoveAccess().getRule();
+	}
+	
+	//Stat:
+	//	value=INT ('HP' | 'Atk' | 'Def' | 'SpA' | 'SpD' | 'Spe');
+	public StatElements getStatAccess() {
+		return pStat;
+	}
+	
+	public ParserRule getStatRule() {
+		return getStatAccess().getRule();
+	}
+	
+	//Shiny:
+	//	'Yes';
+	public ShinyElements getShinyAccess() {
+		return pShiny;
+	}
+	
+	public ParserRule getShinyRule() {
+		return getShinyAccess().getRule();
+	}
+	
+	//Specie:
+	//	ID;
+	public SpecieElements getSpecieAccess() {
+		return pSpecie;
+	}
+	
+	public ParserRule getSpecieRule() {
+		return getSpecieAccess().getRule();
+	}
+	
+	//Nickname:
+	//	ID;
+	public NicknameElements getNicknameAccess() {
+		return pNickname;
+	}
+	
+	public ParserRule getNicknameRule() {
+		return getNicknameAccess().getRule();
+	}
+	
+	//Ability:
+	//	ID+;
+	public AbilityElements getAbilityAccess() {
+		return pAbility;
+	}
+	
+	public ParserRule getAbilityRule() {
+		return getAbilityAccess().getRule();
 	}
 	
 	//terminal ID:

@@ -24,22 +24,31 @@ public interface ShowdownGrammarFactory extends EFactory
   ShowdownGrammarFactory eINSTANCE = io.github.niccomlt.showdown.showdownGrammar.impl.ShowdownGrammarFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Team</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Team</em>'.
    * @generated
    */
-  Model createModel();
+  Team createTeam();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Pokemon</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Pokemon</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  Pokemon createPokemon();
+
+  /**
+   * Returns a new object of class '<em>Stat</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Stat</em>'.
+   * @generated
+   */
+  Stat createStat();
 
   /**
    * Returns the package supported by this factory.
