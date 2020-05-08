@@ -80,10 +80,11 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:12:7: ( '-' )
-            // InternalShowdownGrammar.g:12:9: '-'
+            // InternalShowdownGrammar.g:12:7: ( 'HP' )
+            // InternalShowdownGrammar.g:12:9: 'HP'
             {
-            match('-'); 
+            match("HP"); 
+
 
             }
 
@@ -100,10 +101,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:13:7: ( 'HP' )
-            // InternalShowdownGrammar.g:13:9: 'HP'
+            // InternalShowdownGrammar.g:13:7: ( 'Atk' )
+            // InternalShowdownGrammar.g:13:9: 'Atk'
             {
-            match("HP"); 
+            match("Atk"); 
 
 
             }
@@ -121,10 +122,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:14:7: ( 'Atk' )
-            // InternalShowdownGrammar.g:14:9: 'Atk'
+            // InternalShowdownGrammar.g:14:7: ( 'Def' )
+            // InternalShowdownGrammar.g:14:9: 'Def'
             {
-            match("Atk"); 
+            match("Def"); 
 
 
             }
@@ -142,10 +143,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:15:7: ( 'Def' )
-            // InternalShowdownGrammar.g:15:9: 'Def'
+            // InternalShowdownGrammar.g:15:7: ( 'SpA' )
+            // InternalShowdownGrammar.g:15:9: 'SpA'
             {
-            match("Def"); 
+            match("SpA"); 
 
 
             }
@@ -163,10 +164,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:16:7: ( 'SpA' )
-            // InternalShowdownGrammar.g:16:9: 'SpA'
+            // InternalShowdownGrammar.g:16:7: ( 'SpD' )
+            // InternalShowdownGrammar.g:16:9: 'SpD'
             {
-            match("SpA"); 
+            match("SpD"); 
 
 
             }
@@ -184,10 +185,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:17:7: ( 'SpD' )
-            // InternalShowdownGrammar.g:17:9: 'SpD'
+            // InternalShowdownGrammar.g:17:7: ( 'Spe' )
+            // InternalShowdownGrammar.g:17:9: 'Spe'
             {
-            match("SpD"); 
+            match("Spe"); 
 
 
             }
@@ -205,11 +206,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:18:7: ( 'Spe' )
-            // InternalShowdownGrammar.g:18:9: 'Spe'
+            // InternalShowdownGrammar.g:18:7: ( '@' )
+            // InternalShowdownGrammar.g:18:9: '@'
             {
-            match("Spe"); 
-
+            match('@'); 
 
             }
 
@@ -226,10 +226,11 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:19:7: ( '@' )
-            // InternalShowdownGrammar.g:19:9: '@'
+            // InternalShowdownGrammar.g:19:7: ( 'Ability' )
+            // InternalShowdownGrammar.g:19:9: 'Ability'
             {
-            match('@'); 
+            match("Ability"); 
+
 
             }
 
@@ -246,11 +247,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:20:7: ( 'Ability' )
-            // InternalShowdownGrammar.g:20:9: 'Ability'
+            // InternalShowdownGrammar.g:20:7: ( ':' )
+            // InternalShowdownGrammar.g:20:9: ':'
             {
-            match("Ability"); 
-
+            match(':'); 
 
             }
 
@@ -267,10 +267,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:21:7: ( ':' )
-            // InternalShowdownGrammar.g:21:9: ':'
+            // InternalShowdownGrammar.g:21:7: ( '(' )
+            // InternalShowdownGrammar.g:21:9: '('
             {
-            match(':'); 
+            match('('); 
 
             }
 
@@ -287,10 +287,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:22:7: ( '(' )
-            // InternalShowdownGrammar.g:22:9: '('
+            // InternalShowdownGrammar.g:22:7: ( ')' )
+            // InternalShowdownGrammar.g:22:9: ')'
             {
-            match('('); 
+            match(')'); 
 
             }
 
@@ -307,10 +307,11 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:23:7: ( ')' )
-            // InternalShowdownGrammar.g:23:9: ')'
+            // InternalShowdownGrammar.g:23:7: ( 'Level' )
+            // InternalShowdownGrammar.g:23:9: 'Level'
             {
-            match(')'); 
+            match("Level"); 
+
 
             }
 
@@ -327,10 +328,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:24:7: ( 'Level' )
-            // InternalShowdownGrammar.g:24:9: 'Level'
+            // InternalShowdownGrammar.g:24:7: ( 'Shiny' )
+            // InternalShowdownGrammar.g:24:9: 'Shiny'
             {
-            match("Level"); 
+            match("Shiny"); 
 
 
             }
@@ -348,10 +349,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:25:7: ( 'Shiny' )
-            // InternalShowdownGrammar.g:25:9: 'Shiny'
+            // InternalShowdownGrammar.g:25:7: ( 'Happiness' )
+            // InternalShowdownGrammar.g:25:9: 'Happiness'
             {
-            match("Shiny"); 
+            match("Happiness"); 
 
 
             }
@@ -369,10 +370,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:26:7: ( 'Happiness' )
-            // InternalShowdownGrammar.g:26:9: 'Happiness'
+            // InternalShowdownGrammar.g:26:7: ( 'EVs' )
+            // InternalShowdownGrammar.g:26:9: 'EVs'
             {
-            match("Happiness"); 
+            match("EVs"); 
 
 
             }
@@ -390,11 +391,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:27:7: ( 'EVs' )
-            // InternalShowdownGrammar.g:27:9: 'EVs'
+            // InternalShowdownGrammar.g:27:7: ( '/' )
+            // InternalShowdownGrammar.g:27:9: '/'
             {
-            match("EVs"); 
-
+            match('/'); 
 
             }
 
@@ -411,10 +411,11 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:28:7: ( '/' )
-            // InternalShowdownGrammar.g:28:9: '/'
+            // InternalShowdownGrammar.g:28:7: ( 'Nature' )
+            // InternalShowdownGrammar.g:28:9: 'Nature'
             {
-            match('/'); 
+            match("Nature"); 
+
 
             }
 
@@ -431,10 +432,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:29:7: ( 'Nature' )
-            // InternalShowdownGrammar.g:29:9: 'Nature'
+            // InternalShowdownGrammar.g:29:7: ( 'IVs' )
+            // InternalShowdownGrammar.g:29:9: 'IVs'
             {
-            match("Nature"); 
+            match("IVs"); 
 
 
             }
@@ -452,11 +453,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:30:7: ( 'IVs' )
-            // InternalShowdownGrammar.g:30:9: 'IVs'
+            // InternalShowdownGrammar.g:30:7: ( '-' )
+            // InternalShowdownGrammar.g:30:9: '-'
             {
-            match("IVs"); 
-
+            match('-'); 
 
             }
 
@@ -473,10 +473,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:1704:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalShowdownGrammar.g:1704:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalShowdownGrammar.g:1683:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalShowdownGrammar.g:1683:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalShowdownGrammar.g:1704:11: ( '^' )?
+            // InternalShowdownGrammar.g:1683:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -485,7 +485,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalShowdownGrammar.g:1704:11: '^'
+                    // InternalShowdownGrammar.g:1683:11: '^'
                     {
                     match('^'); 
 
@@ -503,7 +503,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalShowdownGrammar.g:1704:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalShowdownGrammar.g:1683:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -552,10 +552,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:1706:10: ( ( '0' .. '9' )+ )
-            // InternalShowdownGrammar.g:1706:12: ( '0' .. '9' )+
+            // InternalShowdownGrammar.g:1685:10: ( ( '0' .. '9' )+ )
+            // InternalShowdownGrammar.g:1685:12: ( '0' .. '9' )+
             {
-            // InternalShowdownGrammar.g:1706:12: ( '0' .. '9' )+
+            // InternalShowdownGrammar.g:1685:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -569,7 +569,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalShowdownGrammar.g:1706:13: '0' .. '9'
+            	    // InternalShowdownGrammar.g:1685:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -601,10 +601,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:1708:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalShowdownGrammar.g:1708:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalShowdownGrammar.g:1687:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalShowdownGrammar.g:1687:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalShowdownGrammar.g:1708:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalShowdownGrammar.g:1687:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -622,10 +622,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalShowdownGrammar.g:1708:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalShowdownGrammar.g:1687:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalShowdownGrammar.g:1708:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalShowdownGrammar.g:1687:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -641,7 +641,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalShowdownGrammar.g:1708:21: '\\\\' .
+                    	    // InternalShowdownGrammar.g:1687:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -649,7 +649,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalShowdownGrammar.g:1708:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalShowdownGrammar.g:1687:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -674,10 +674,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalShowdownGrammar.g:1708:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalShowdownGrammar.g:1687:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalShowdownGrammar.g:1708:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalShowdownGrammar.g:1687:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -693,7 +693,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalShowdownGrammar.g:1708:54: '\\\\' .
+                    	    // InternalShowdownGrammar.g:1687:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -701,7 +701,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalShowdownGrammar.g:1708:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalShowdownGrammar.g:1687:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -744,12 +744,12 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:1710:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalShowdownGrammar.g:1710:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalShowdownGrammar.g:1689:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalShowdownGrammar.g:1689:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalShowdownGrammar.g:1710:24: ( options {greedy=false; } : . )*
+            // InternalShowdownGrammar.g:1689:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -774,7 +774,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalShowdownGrammar.g:1710:52: .
+            	    // InternalShowdownGrammar.g:1689:52: .
             	    {
             	    matchAny(); 
 
@@ -804,12 +804,12 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:1712:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalShowdownGrammar.g:1712:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalShowdownGrammar.g:1691:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalShowdownGrammar.g:1691:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalShowdownGrammar.g:1712:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalShowdownGrammar.g:1691:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -822,7 +822,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalShowdownGrammar.g:1712:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalShowdownGrammar.g:1691:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -842,7 +842,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalShowdownGrammar.g:1712:40: ( ( '\\r' )? '\\n' )?
+            // InternalShowdownGrammar.g:1691:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -851,9 +851,9 @@ public class InternalShowdownGrammarLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalShowdownGrammar.g:1712:41: ( '\\r' )? '\\n'
+                    // InternalShowdownGrammar.g:1691:41: ( '\\r' )? '\\n'
                     {
-                    // InternalShowdownGrammar.g:1712:41: ( '\\r' )?
+                    // InternalShowdownGrammar.g:1691:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -862,7 +862,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalShowdownGrammar.g:1712:41: '\\r'
+                            // InternalShowdownGrammar.g:1691:41: '\\r'
                             {
                             match('\r'); 
 
@@ -894,10 +894,10 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:1714:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalShowdownGrammar.g:1714:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalShowdownGrammar.g:1693:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalShowdownGrammar.g:1693:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalShowdownGrammar.g:1714:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalShowdownGrammar.g:1693:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -951,8 +951,8 @@ public class InternalShowdownGrammarLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalShowdownGrammar.g:1716:16: ( . )
-            // InternalShowdownGrammar.g:1716:18: .
+            // InternalShowdownGrammar.g:1695:16: ( . )
+            // InternalShowdownGrammar.g:1695:18: .
             {
             matchAny(); 
 
@@ -1168,34 +1168,34 @@ public class InternalShowdownGrammarLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\30\1\uffff\4\30\4\uffff\2\30\1\51\2\30\1\26\2\uffff\2\26\2\uffff\1\30\2\uffff\1\60\6\30\4\uffff\2\30\3\uffff\2\30\3\uffff\1\75\1\uffff\1\30\1\77\1\30\1\101\1\102\1\103\1\104\2\30\1\107\1\30\1\111\1\uffff\1\30\1\uffff\1\30\4\uffff\2\30\1\uffff\1\30\1\uffff\2\30\1\121\1\122\3\30\2\uffff\1\126\1\30\1\130\1\uffff\1\30\1\uffff\1\132\1\uffff";
+        "\1\uffff\5\30\4\uffff\2\30\1\50\2\30\1\uffff\1\26\2\uffff\2\26\2\uffff\1\30\1\uffff\1\60\6\30\4\uffff\2\30\3\uffff\2\30\4\uffff\1\75\1\uffff\1\30\1\77\1\30\1\101\1\102\1\103\1\104\2\30\1\107\1\30\1\111\1\uffff\1\30\1\uffff\1\30\4\uffff\2\30\1\uffff\1\30\1\uffff\2\30\1\121\1\122\3\30\2\uffff\1\126\1\30\1\130\1\uffff\1\30\1\uffff\1\132\1\uffff";
     static final String DFA12_eofS =
         "\133\uffff";
     static final String DFA12_minS =
-        "\1\0\1\145\1\uffff\1\120\1\142\1\145\1\150\4\uffff\1\145\1\126\1\52\1\141\1\126\1\101\2\uffff\2\0\2\uffff\1\163\2\uffff\1\60\1\160\1\153\1\151\1\146\1\101\1\151\4\uffff\1\166\1\163\3\uffff\1\164\1\163\3\uffff\1\60\1\uffff\1\160\1\60\1\154\4\60\1\156\1\145\1\60\1\165\1\60\1\uffff\1\151\1\uffff\1\151\4\uffff\1\171\1\154\1\uffff\1\162\1\uffff\1\156\1\164\2\60\2\145\1\171\2\uffff\1\60\1\163\1\60\1\uffff\1\163\1\uffff\1\60\1\uffff";
+        "\1\0\1\145\1\120\1\142\1\145\1\150\4\uffff\1\145\1\126\1\52\1\141\1\126\1\uffff\1\101\2\uffff\2\0\2\uffff\1\163\1\uffff\1\60\1\160\1\153\1\151\1\146\1\101\1\151\4\uffff\1\166\1\163\3\uffff\1\164\1\163\4\uffff\1\60\1\uffff\1\160\1\60\1\154\4\60\1\156\1\145\1\60\1\165\1\60\1\uffff\1\151\1\uffff\1\151\4\uffff\1\171\1\154\1\uffff\1\162\1\uffff\1\156\1\164\2\60\2\145\1\171\2\uffff\1\60\1\163\1\60\1\uffff\1\163\1\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\145\1\uffff\1\141\1\164\1\145\1\160\4\uffff\1\145\1\126\1\57\1\141\1\126\1\172\2\uffff\2\uffff\2\uffff\1\163\2\uffff\1\172\1\160\1\153\1\151\1\146\1\145\1\151\4\uffff\1\166\1\163\3\uffff\1\164\1\163\3\uffff\1\172\1\uffff\1\160\1\172\1\154\4\172\1\156\1\145\1\172\1\165\1\172\1\uffff\1\151\1\uffff\1\151\4\uffff\1\171\1\154\1\uffff\1\162\1\uffff\1\156\1\164\2\172\2\145\1\171\2\uffff\1\172\1\163\1\172\1\uffff\1\163\1\uffff\1\172\1\uffff";
+        "\1\uffff\1\145\1\141\1\164\1\145\1\160\4\uffff\1\145\1\126\1\57\1\141\1\126\1\uffff\1\172\2\uffff\2\uffff\2\uffff\1\163\1\uffff\1\172\1\160\1\153\1\151\1\146\1\145\1\151\4\uffff\1\166\1\163\3\uffff\1\164\1\163\4\uffff\1\172\1\uffff\1\160\1\172\1\154\4\172\1\156\1\145\1\172\1\165\1\172\1\uffff\1\151\1\uffff\1\151\4\uffff\1\171\1\154\1\uffff\1\162\1\uffff\1\156\1\164\2\172\2\145\1\171\2\uffff\1\172\1\163\1\172\1\uffff\1\163\1\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\4\uffff\1\11\1\13\1\14\1\15\6\uffff\1\25\1\26\2\uffff\1\32\1\33\1\uffff\1\25\1\2\7\uffff\1\11\1\13\1\14\1\15\2\uffff\1\30\1\31\1\22\2\uffff\1\26\1\27\1\32\1\uffff\1\3\14\uffff\1\1\1\uffff\1\4\1\uffff\1\5\1\6\1\7\1\10\2\uffff\1\21\1\uffff\1\24\7\uffff\1\17\1\16\3\uffff\1\23\1\uffff\1\12\1\uffff\1\20";
+        "\6\uffff\1\10\1\12\1\13\1\14\5\uffff\1\24\1\uffff\1\25\1\26\2\uffff\1\32\1\33\1\uffff\1\25\7\uffff\1\10\1\12\1\13\1\14\2\uffff\1\30\1\31\1\21\2\uffff\1\24\1\26\1\27\1\32\1\uffff\1\2\14\uffff\1\1\1\uffff\1\3\1\uffff\1\4\1\5\1\6\1\7\2\uffff\1\20\1\uffff\1\23\7\uffff\1\16\1\15\3\uffff\1\22\1\uffff\1\11\1\uffff\1\17";
     static final String DFA12_specialS =
-        "\1\2\22\uffff\1\0\1\1\106\uffff}>";
+        "\1\1\22\uffff\1\0\1\2\106\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\23\4\26\1\24\1\11\1\12\3\26\1\2\1\26\1\15\12\22\1\10\5\26\1\7\1\4\2\21\1\5\1\14\2\21\1\3\1\17\2\21\1\13\1\21\1\16\4\21\1\6\5\21\1\1\1\21\3\26\1\20\1\21\1\26\32\21\uff85\26",
+            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\23\4\26\1\24\1\10\1\11\3\26\1\17\1\26\1\14\12\22\1\7\5\26\1\6\1\3\2\21\1\4\1\13\2\21\1\2\1\16\2\21\1\12\1\21\1\15\4\21\1\5\5\21\1\1\1\21\3\26\1\20\1\21\1\26\32\21\uff85\26",
             "\1\27",
-            "",
-            "\1\32\20\uffff\1\33",
-            "\1\35\21\uffff\1\34",
-            "\1\36",
-            "\1\40\7\uffff\1\37",
-            "",
+            "\1\31\20\uffff\1\32",
+            "\1\34\21\uffff\1\33",
+            "\1\35",
+            "\1\37\7\uffff\1\36",
             "",
             "",
             "",
+            "",
+            "\1\44",
             "\1\45",
-            "\1\46",
-            "\1\47\4\uffff\1\50",
+            "\1\46\4\uffff\1\47",
+            "\1\51",
             "\1\52",
-            "\1\53",
+            "",
             "\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             "",
@@ -1204,7 +1204,6 @@ public class InternalShowdownGrammarLexer extends Lexer {
             "",
             "",
             "\1\57",
-            "",
             "",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "\1\61",
@@ -1224,6 +1223,7 @@ public class InternalShowdownGrammarLexer extends Lexer {
             "",
             "\1\73",
             "\1\74",
+            "",
             "",
             "",
             "",
@@ -1320,48 +1320,38 @@ public class InternalShowdownGrammarLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_20 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_20>='\u0000' && LA12_20<='\uFFFF')) ) {s = 45;}
-
-                        else s = 22;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
                         if ( (LA12_0=='Y') ) {s = 1;}
 
-                        else if ( (LA12_0=='-') ) {s = 2;}
+                        else if ( (LA12_0=='H') ) {s = 2;}
 
-                        else if ( (LA12_0=='H') ) {s = 3;}
+                        else if ( (LA12_0=='A') ) {s = 3;}
 
-                        else if ( (LA12_0=='A') ) {s = 4;}
+                        else if ( (LA12_0=='D') ) {s = 4;}
 
-                        else if ( (LA12_0=='D') ) {s = 5;}
+                        else if ( (LA12_0=='S') ) {s = 5;}
 
-                        else if ( (LA12_0=='S') ) {s = 6;}
+                        else if ( (LA12_0=='@') ) {s = 6;}
 
-                        else if ( (LA12_0=='@') ) {s = 7;}
+                        else if ( (LA12_0==':') ) {s = 7;}
 
-                        else if ( (LA12_0==':') ) {s = 8;}
+                        else if ( (LA12_0=='(') ) {s = 8;}
 
-                        else if ( (LA12_0=='(') ) {s = 9;}
+                        else if ( (LA12_0==')') ) {s = 9;}
 
-                        else if ( (LA12_0==')') ) {s = 10;}
+                        else if ( (LA12_0=='L') ) {s = 10;}
 
-                        else if ( (LA12_0=='L') ) {s = 11;}
+                        else if ( (LA12_0=='E') ) {s = 11;}
 
-                        else if ( (LA12_0=='E') ) {s = 12;}
+                        else if ( (LA12_0=='/') ) {s = 12;}
 
-                        else if ( (LA12_0=='/') ) {s = 13;}
+                        else if ( (LA12_0=='N') ) {s = 13;}
 
-                        else if ( (LA12_0=='N') ) {s = 14;}
+                        else if ( (LA12_0=='I') ) {s = 14;}
 
-                        else if ( (LA12_0=='I') ) {s = 15;}
+                        else if ( (LA12_0=='-') ) {s = 15;}
 
                         else if ( (LA12_0=='^') ) {s = 16;}
 
@@ -1376,6 +1366,16 @@ public class InternalShowdownGrammarLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<=',')||LA12_0=='.'||(LA12_0>=';' && LA12_0<='?')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 22;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_20 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_20>='\u0000' && LA12_20<='\uFFFF')) ) {s = 45;}
+
+                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;

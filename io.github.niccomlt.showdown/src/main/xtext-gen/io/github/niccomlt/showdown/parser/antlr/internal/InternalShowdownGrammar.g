@@ -463,13 +463,7 @@ ruleMove returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 			$current.merge(this_ID_0);
 		}
 		{
-			newLeafNode(this_ID_0, grammarAccess.getMoveAccess().getIDTerminalRuleCall_0());
-		}
-		    |
-		kw='-'
-		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getMoveAccess().getHyphenMinusKeyword_1());
+			newLeafNode(this_ID_0, grammarAccess.getMoveAccess().getIDTerminalRuleCall());
 		}
 	)+
 ;

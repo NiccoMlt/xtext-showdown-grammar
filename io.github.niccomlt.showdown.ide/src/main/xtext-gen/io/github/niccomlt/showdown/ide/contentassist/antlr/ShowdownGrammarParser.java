@@ -32,7 +32,6 @@ public class ShowdownGrammarParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, ShowdownGrammarGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getPokemonAccess().getAlternatives_0(), "rule__Pokemon__Alternatives_0");
-			builder.put(grammarAccess.getMoveAccess().getAlternatives(), "rule__Move__Alternatives");
 			builder.put(grammarAccess.getStatAccess().getAlternatives_1(), "rule__Stat__Alternatives_1");
 			builder.put(grammarAccess.getPokemonAccess().getGroup(), "rule__Pokemon__Group__0");
 			builder.put(grammarAccess.getPokemonAccess().getGroup_0_0(), "rule__Pokemon__Group_0_0__0");

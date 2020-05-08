@@ -308,11 +308,11 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
             if ( (LA2_0==RULE_ID) ) {
                 int LA2_1 = input.LA(2);
 
-                if ( (LA2_1==11) ) {
-                    alt2=1;
-                }
-                else if ( (LA2_1==13) ) {
+                if ( (LA2_1==13) ) {
                     alt2=2;
+                }
+                else if ( (LA2_1==11) ) {
+                    alt2=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -942,7 +942,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalShowdownGrammar.g:418:4: otherlv_29= '-' ( (lv_moves_30_0= ruleMove ) )
             	    {
-            	    otherlv_29=(Token)match(input,23,FOLLOW_23); 
+            	    otherlv_29=(Token)match(input,23,FOLLOW_8); 
 
             	    				newLeafNode(otherlv_29, grammarAccess.getPokemonAccess().getHyphenMinusKeyword_12_0());
             	    			
@@ -955,7 +955,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
             	    						newCompositeNode(grammarAccess.getPokemonAccess().getMovesMoveParserRuleCall_12_1_0());
             	    					
-            	    pushFollow(FOLLOW_24);
+            	    pushFollow(FOLLOW_23);
             	    lv_moves_30_0=ruleMove();
 
             	    state._fsp--;
@@ -1049,25 +1049,24 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMove"
-    // InternalShowdownGrammar.g:453:1: ruleMove returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | kw= '-' )+ ;
+    // InternalShowdownGrammar.g:453:1: ruleMove returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID )+ ;
     public final AntlrDatatypeRuleToken ruleMove() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_ID_0=null;
-        Token kw=null;
 
 
         	enterRule();
 
         try {
-            // InternalShowdownGrammar.g:459:2: ( (this_ID_0= RULE_ID | kw= '-' )+ )
-            // InternalShowdownGrammar.g:460:2: (this_ID_0= RULE_ID | kw= '-' )+
+            // InternalShowdownGrammar.g:459:2: ( (this_ID_0= RULE_ID )+ )
+            // InternalShowdownGrammar.g:460:2: (this_ID_0= RULE_ID )+
             {
-            // InternalShowdownGrammar.g:460:2: (this_ID_0= RULE_ID | kw= '-' )+
+            // InternalShowdownGrammar.g:460:2: (this_ID_0= RULE_ID )+
             int cnt14=0;
             loop14:
             do {
-                int alt14=3;
+                int alt14=2;
                 int LA14_0 = input.LA(1);
 
                 if ( (LA14_0==RULE_ID) ) {
@@ -1079,32 +1078,18 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
                 }
-                else if ( (LA14_0==23) ) {
-                    alt14=2;
-                }
 
 
                 switch (alt14) {
             	case 1 :
             	    // InternalShowdownGrammar.g:461:3: this_ID_0= RULE_ID
             	    {
-            	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_3); 
 
             	    			current.merge(this_ID_0);
             	    		
 
-            	    			newLeafNode(this_ID_0, grammarAccess.getMoveAccess().getIDTerminalRuleCall_0());
-            	    		
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // InternalShowdownGrammar.g:469:3: kw= '-'
-            	    {
-            	    kw=(Token)match(input,23,FOLLOW_25); 
-
-            	    			current.merge(kw);
-            	    			newLeafNode(kw, grammarAccess.getMoveAccess().getHyphenMinusKeyword_1());
+            	    			newLeafNode(this_ID_0, grammarAccess.getMoveAccess().getIDTerminalRuleCall());
             	    		
 
             	    }
@@ -1139,7 +1124,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStat"
-    // InternalShowdownGrammar.g:478:1: entryRuleStat returns [EObject current=null] : iv_ruleStat= ruleStat EOF ;
+    // InternalShowdownGrammar.g:472:1: entryRuleStat returns [EObject current=null] : iv_ruleStat= ruleStat EOF ;
     public final EObject entryRuleStat() throws RecognitionException {
         EObject current = null;
 
@@ -1147,8 +1132,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalShowdownGrammar.g:478:45: (iv_ruleStat= ruleStat EOF )
-            // InternalShowdownGrammar.g:479:2: iv_ruleStat= ruleStat EOF
+            // InternalShowdownGrammar.g:472:45: (iv_ruleStat= ruleStat EOF )
+            // InternalShowdownGrammar.g:473:2: iv_ruleStat= ruleStat EOF
             {
              newCompositeNode(grammarAccess.getStatRule()); 
             pushFollow(FOLLOW_1);
@@ -1175,7 +1160,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStat"
-    // InternalShowdownGrammar.g:485:1: ruleStat returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) ) ;
+    // InternalShowdownGrammar.g:479:1: ruleStat returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) ) ;
     public final EObject ruleStat() throws RecognitionException {
         EObject current = null;
 
@@ -1191,19 +1176,19 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalShowdownGrammar.g:491:2: ( ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) ) )
-            // InternalShowdownGrammar.g:492:2: ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) )
+            // InternalShowdownGrammar.g:485:2: ( ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) ) )
+            // InternalShowdownGrammar.g:486:2: ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) )
             {
-            // InternalShowdownGrammar.g:492:2: ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) )
-            // InternalShowdownGrammar.g:493:3: ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' )
+            // InternalShowdownGrammar.g:486:2: ( ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' ) )
+            // InternalShowdownGrammar.g:487:3: ( (lv_value_0_0= RULE_INT ) ) (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' )
             {
-            // InternalShowdownGrammar.g:493:3: ( (lv_value_0_0= RULE_INT ) )
-            // InternalShowdownGrammar.g:494:4: (lv_value_0_0= RULE_INT )
+            // InternalShowdownGrammar.g:487:3: ( (lv_value_0_0= RULE_INT ) )
+            // InternalShowdownGrammar.g:488:4: (lv_value_0_0= RULE_INT )
             {
-            // InternalShowdownGrammar.g:494:4: (lv_value_0_0= RULE_INT )
-            // InternalShowdownGrammar.g:495:5: lv_value_0_0= RULE_INT
+            // InternalShowdownGrammar.g:488:4: (lv_value_0_0= RULE_INT )
+            // InternalShowdownGrammar.g:489:5: lv_value_0_0= RULE_INT
             {
-            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_26); 
+            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_24); 
 
             					newLeafNode(lv_value_0_0, grammarAccess.getStatAccess().getValueINTTerminalRuleCall_0_0());
             				
@@ -1223,7 +1208,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalShowdownGrammar.g:511:3: (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' )
+            // InternalShowdownGrammar.g:505:3: (otherlv_1= 'HP' | otherlv_2= 'Atk' | otherlv_3= 'Def' | otherlv_4= 'SpA' | otherlv_5= 'SpD' | otherlv_6= 'Spe' )
             int alt15=6;
             switch ( input.LA(1) ) {
             case 24:
@@ -1265,7 +1250,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
             switch (alt15) {
                 case 1 :
-                    // InternalShowdownGrammar.g:512:4: otherlv_1= 'HP'
+                    // InternalShowdownGrammar.g:506:4: otherlv_1= 'HP'
                     {
                     otherlv_1=(Token)match(input,24,FOLLOW_2); 
 
@@ -1275,7 +1260,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalShowdownGrammar.g:517:4: otherlv_2= 'Atk'
+                    // InternalShowdownGrammar.g:511:4: otherlv_2= 'Atk'
                     {
                     otherlv_2=(Token)match(input,25,FOLLOW_2); 
 
@@ -1285,7 +1270,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalShowdownGrammar.g:522:4: otherlv_3= 'Def'
+                    // InternalShowdownGrammar.g:516:4: otherlv_3= 'Def'
                     {
                     otherlv_3=(Token)match(input,26,FOLLOW_2); 
 
@@ -1295,7 +1280,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalShowdownGrammar.g:527:4: otherlv_4= 'SpA'
+                    // InternalShowdownGrammar.g:521:4: otherlv_4= 'SpA'
                     {
                     otherlv_4=(Token)match(input,27,FOLLOW_2); 
 
@@ -1305,7 +1290,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalShowdownGrammar.g:532:4: otherlv_5= 'SpD'
+                    // InternalShowdownGrammar.g:526:4: otherlv_5= 'SpD'
                     {
                     otherlv_5=(Token)match(input,28,FOLLOW_2); 
 
@@ -1315,7 +1300,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalShowdownGrammar.g:537:4: otherlv_6= 'Spe'
+                    // InternalShowdownGrammar.g:531:4: otherlv_6= 'Spe'
                     {
                     otherlv_6=(Token)match(input,29,FOLLOW_2); 
 
@@ -1350,7 +1335,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleShiny"
-    // InternalShowdownGrammar.g:546:1: entryRuleShiny returns [String current=null] : iv_ruleShiny= ruleShiny EOF ;
+    // InternalShowdownGrammar.g:540:1: entryRuleShiny returns [String current=null] : iv_ruleShiny= ruleShiny EOF ;
     public final String entryRuleShiny() throws RecognitionException {
         String current = null;
 
@@ -1358,8 +1343,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalShowdownGrammar.g:546:45: (iv_ruleShiny= ruleShiny EOF )
-            // InternalShowdownGrammar.g:547:2: iv_ruleShiny= ruleShiny EOF
+            // InternalShowdownGrammar.g:540:45: (iv_ruleShiny= ruleShiny EOF )
+            // InternalShowdownGrammar.g:541:2: iv_ruleShiny= ruleShiny EOF
             {
              newCompositeNode(grammarAccess.getShinyRule()); 
             pushFollow(FOLLOW_1);
@@ -1386,7 +1371,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleShiny"
-    // InternalShowdownGrammar.g:553:1: ruleShiny returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'Yes' ;
+    // InternalShowdownGrammar.g:547:1: ruleShiny returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'Yes' ;
     public final AntlrDatatypeRuleToken ruleShiny() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1396,8 +1381,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalShowdownGrammar.g:559:2: (kw= 'Yes' )
-            // InternalShowdownGrammar.g:560:2: kw= 'Yes'
+            // InternalShowdownGrammar.g:553:2: (kw= 'Yes' )
+            // InternalShowdownGrammar.g:554:2: kw= 'Yes'
             {
             kw=(Token)match(input,30,FOLLOW_2); 
 
@@ -1424,7 +1409,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSpecie"
-    // InternalShowdownGrammar.g:568:1: entryRuleSpecie returns [String current=null] : iv_ruleSpecie= ruleSpecie EOF ;
+    // InternalShowdownGrammar.g:562:1: entryRuleSpecie returns [String current=null] : iv_ruleSpecie= ruleSpecie EOF ;
     public final String entryRuleSpecie() throws RecognitionException {
         String current = null;
 
@@ -1432,8 +1417,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalShowdownGrammar.g:568:46: (iv_ruleSpecie= ruleSpecie EOF )
-            // InternalShowdownGrammar.g:569:2: iv_ruleSpecie= ruleSpecie EOF
+            // InternalShowdownGrammar.g:562:46: (iv_ruleSpecie= ruleSpecie EOF )
+            // InternalShowdownGrammar.g:563:2: iv_ruleSpecie= ruleSpecie EOF
             {
              newCompositeNode(grammarAccess.getSpecieRule()); 
             pushFollow(FOLLOW_1);
@@ -1460,7 +1445,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSpecie"
-    // InternalShowdownGrammar.g:575:1: ruleSpecie returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalShowdownGrammar.g:569:1: ruleSpecie returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleSpecie() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1470,8 +1455,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalShowdownGrammar.g:581:2: (this_ID_0= RULE_ID )
-            // InternalShowdownGrammar.g:582:2: this_ID_0= RULE_ID
+            // InternalShowdownGrammar.g:575:2: (this_ID_0= RULE_ID )
+            // InternalShowdownGrammar.g:576:2: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -1500,7 +1485,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNickname"
-    // InternalShowdownGrammar.g:592:1: entryRuleNickname returns [String current=null] : iv_ruleNickname= ruleNickname EOF ;
+    // InternalShowdownGrammar.g:586:1: entryRuleNickname returns [String current=null] : iv_ruleNickname= ruleNickname EOF ;
     public final String entryRuleNickname() throws RecognitionException {
         String current = null;
 
@@ -1508,8 +1493,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalShowdownGrammar.g:592:48: (iv_ruleNickname= ruleNickname EOF )
-            // InternalShowdownGrammar.g:593:2: iv_ruleNickname= ruleNickname EOF
+            // InternalShowdownGrammar.g:586:48: (iv_ruleNickname= ruleNickname EOF )
+            // InternalShowdownGrammar.g:587:2: iv_ruleNickname= ruleNickname EOF
             {
              newCompositeNode(grammarAccess.getNicknameRule()); 
             pushFollow(FOLLOW_1);
@@ -1536,7 +1521,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNickname"
-    // InternalShowdownGrammar.g:599:1: ruleNickname returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalShowdownGrammar.g:593:1: ruleNickname returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleNickname() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1546,8 +1531,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalShowdownGrammar.g:605:2: (this_ID_0= RULE_ID )
-            // InternalShowdownGrammar.g:606:2: this_ID_0= RULE_ID
+            // InternalShowdownGrammar.g:599:2: (this_ID_0= RULE_ID )
+            // InternalShowdownGrammar.g:600:2: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -1576,7 +1561,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAbility"
-    // InternalShowdownGrammar.g:616:1: entryRuleAbility returns [String current=null] : iv_ruleAbility= ruleAbility EOF ;
+    // InternalShowdownGrammar.g:610:1: entryRuleAbility returns [String current=null] : iv_ruleAbility= ruleAbility EOF ;
     public final String entryRuleAbility() throws RecognitionException {
         String current = null;
 
@@ -1584,8 +1569,8 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalShowdownGrammar.g:616:47: (iv_ruleAbility= ruleAbility EOF )
-            // InternalShowdownGrammar.g:617:2: iv_ruleAbility= ruleAbility EOF
+            // InternalShowdownGrammar.g:610:47: (iv_ruleAbility= ruleAbility EOF )
+            // InternalShowdownGrammar.g:611:2: iv_ruleAbility= ruleAbility EOF
             {
              newCompositeNode(grammarAccess.getAbilityRule()); 
             pushFollow(FOLLOW_1);
@@ -1612,7 +1597,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAbility"
-    // InternalShowdownGrammar.g:623:1: ruleAbility returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID )+ ;
+    // InternalShowdownGrammar.g:617:1: ruleAbility returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID )+ ;
     public final AntlrDatatypeRuleToken ruleAbility() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1622,10 +1607,10 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalShowdownGrammar.g:629:2: ( (this_ID_0= RULE_ID )+ )
-            // InternalShowdownGrammar.g:630:2: (this_ID_0= RULE_ID )+
+            // InternalShowdownGrammar.g:623:2: ( (this_ID_0= RULE_ID )+ )
+            // InternalShowdownGrammar.g:624:2: (this_ID_0= RULE_ID )+
             {
-            // InternalShowdownGrammar.g:630:2: (this_ID_0= RULE_ID )+
+            // InternalShowdownGrammar.g:624:2: (this_ID_0= RULE_ID )+
             int cnt16=0;
             loop16:
             do {
@@ -1645,7 +1630,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // InternalShowdownGrammar.g:631:3: this_ID_0= RULE_ID
+            	    // InternalShowdownGrammar.g:625:3: this_ID_0= RULE_ID
             	    {
             	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_3); 
 
@@ -1712,9 +1697,7 @@ public class InternalShowdownGrammarParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000C00000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000800020L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000900020L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000800010L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000800012L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x000000003F000000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x000000003F000000L});
 
 }

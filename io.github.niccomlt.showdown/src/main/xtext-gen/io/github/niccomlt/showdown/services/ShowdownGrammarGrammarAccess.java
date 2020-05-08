@@ -270,22 +270,14 @@ public class ShowdownGrammarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class MoveElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Move");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Keyword cHyphenMinusKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall = (RuleCall)rule.eContents().get(1);
 		
 		//Move:
-		//	(ID | '-')+;
+		//	ID+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(ID | '-')+
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
-		
-		//'-'
-		public Keyword getHyphenMinusKeyword_1() { return cHyphenMinusKeyword_1; }
+		//ID+
+		public RuleCall getIDTerminalRuleCall() { return cIDTerminalRuleCall; }
 	}
 	public class StatElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.github.niccomlt.showdown.ShowdownGrammar.Stat");
@@ -458,7 +450,7 @@ public class ShowdownGrammarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Move:
-	//	(ID | '-')+;
+	//	ID+;
 	public MoveElements getMoveAccess() {
 		return pMove;
 	}

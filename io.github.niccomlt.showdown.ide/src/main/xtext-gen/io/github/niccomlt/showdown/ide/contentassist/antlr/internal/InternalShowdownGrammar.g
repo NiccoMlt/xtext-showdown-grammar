@@ -116,14 +116,14 @@ ruleMove
 	:
 	(
 		(
-			{ before(grammarAccess.getMoveAccess().getAlternatives()); }
-			(rule__Move__Alternatives)
-			{ after(grammarAccess.getMoveAccess().getAlternatives()); }
+			{ before(grammarAccess.getMoveAccess().getIDTerminalRuleCall()); }
+			(RULE_ID)
+			{ after(grammarAccess.getMoveAccess().getIDTerminalRuleCall()); }
 		)
 		(
-			{ before(grammarAccess.getMoveAccess().getAlternatives()); }
-			(rule__Move__Alternatives)*
-			{ after(grammarAccess.getMoveAccess().getAlternatives()); }
+			{ before(grammarAccess.getMoveAccess().getIDTerminalRuleCall()); }
+			(RULE_ID)*
+			{ after(grammarAccess.getMoveAccess().getIDTerminalRuleCall()); }
 		)
 	)
 ;
@@ -278,27 +278,6 @@ rule__Pokemon__Alternatives_0
 		{ before(grammarAccess.getPokemonAccess().getSpecieAssignment_0_1()); }
 		(rule__Pokemon__SpecieAssignment_0_1)
 		{ after(grammarAccess.getPokemonAccess().getSpecieAssignment_0_1()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Move__Alternatives
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getMoveAccess().getIDTerminalRuleCall_0()); }
-		RULE_ID
-		{ after(grammarAccess.getMoveAccess().getIDTerminalRuleCall_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getMoveAccess().getHyphenMinusKeyword_1()); }
-		'-'
-		{ after(grammarAccess.getMoveAccess().getHyphenMinusKeyword_1()); }
 	)
 ;
 finally {

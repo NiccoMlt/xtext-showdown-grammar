@@ -1,3 +1,23 @@
+# From Protelis-Parser: https://github.com/Protelis/Protelis-Parser/blob/master/.gitignore
+*/bin/*
+.metadata/*
+.directory
+*/target/*
+*/src-gen/
+*/xtend-gen/
+**/generated/*
+*.xml_gen
+**/.recommenders/*
+*_gen
+/.metadata/
+.gradle/
+prepare_environment.sh
+settings.xml
+secrets.tar
+target/
+*/build/
+# End from Protelis-Parser: https://github.com/Protelis/Protelis-Parser/blob/master/.gitignore
+
 # Created by https://www.gitignore.io/api/osx,git,java,linux,macos,xtext,gradle,windows,eclipse
 # Edit at https://www.gitignore.io/?templates=osx,git,java,linux,macos,xtext,gradle,windows,eclipse
 
